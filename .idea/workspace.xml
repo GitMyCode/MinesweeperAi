@@ -69,11 +69,13 @@
           <file leaf-file-name="Grid.java" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Grid.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="160" column="36" selection-start="4882" selection-end="4882" vertical-scroll-proportion="0.87396353" vertical-offset="2193" max-vertical-offset="3366">
+                <state line="137" column="4" selection-start="4076" selection-end="4076" vertical-scroll-proportion="0.53898305" vertical-offset="2011" max-vertical-offset="3485">
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#3821#4200#0" expanded="true" />
-                    <element signature="e#4189#4190#0" expanded="true" />
+                    <element signature="e#3661#4046#0" expanded="true" />
+                    <element signature="e#4035#4036#0" expanded="true" />
+                    <element signature="e#5413#5414#0" expanded="true" />
+                    <element signature="e#5458#5459#0" expanded="true" />
                     <element signature="method#getStatus#0;class#Case#0;class#Grid#0" expanded="true" />
                   </folding>
                 </state>
@@ -83,7 +85,7 @@
           <file leaf-file-name="Minesweeper.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Minesweeper.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="13" column="0" selection-start="227" selection-end="227" vertical-scroll-proportion="0.0" vertical-offset="94" max-vertical-offset="697">
+                <state line="20" column="39" selection-start="415" selection-end="415" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
                   <folding />
                 </state>
               </provider>
@@ -96,7 +98,7 @@
           <file leaf-file-name="Board.java" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/../MineSweeperCopy/src/Board.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="221" column="41" selection-start="6448" selection-end="6448" vertical-scroll-proportion="-0.31011608" vertical-offset="3757" max-vertical-offset="5559">
+                <state line="221" column="41" selection-start="6448" selection-end="6448" vertical-scroll-proportion="-1.5373135" vertical-offset="4497" max-vertical-offset="5559">
                   <folding />
                 </state>
               </provider>
@@ -105,8 +107,11 @@
           <file leaf-file-name="Mines.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/../MineSweeperCopy/src/Mines.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="33" column="0" selection-start="759" selection-end="759" vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="816">
-                  <folding />
+                <state line="22" column="0" selection-start="508" selection-end="508" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="731">
+                  <folding>
+                    <element signature="e#742#915#0" expanded="true" />
+                    <element signature="e#904#905#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -168,14 +173,6 @@
               <option name="myItemId" value="Minesweeper" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; 1.6 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -199,12 +196,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Minesweeper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -437,8 +428,8 @@
     <recent_temporary>
       <list size="3">
         <item index="0" class="java.lang.String" itemvalue="Application.Minesweeper" />
-        <item index="1" class="java.lang.String" itemvalue="Applet.DigitalClock" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Mines" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Mines" />
+        <item index="2" class="java.lang.String" itemvalue="Applet.DigitalClock" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -480,7 +471,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19222577" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19222577" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32870865" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -515,8 +506,10 @@
         <state line="166" column="26" selection-start="4798" selection-end="4798" vertical-scroll-proportion="0.0" vertical-offset="2559" max-vertical-offset="3604">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3821#4200#0" expanded="true" />
-            <element signature="e#4189#4190#0" expanded="true" />
+            <element signature="e#3661#4046#0" expanded="true" />
+            <element signature="e#4035#4036#0" expanded="true" />
+            <element signature="e#5413#5414#0" expanded="true" />
+            <element signature="e#5458#5459#0" expanded="true" />
             <element signature="method#getStatus#0;class#Case#0;class#Grid#0" expanded="true" />
           </folding>
         </state>
@@ -539,7 +532,10 @@
     <entry file="file://$PROJECT_DIR$/../MineSweeperCopy/src/Mines.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="33" column="0" selection-start="759" selection-end="759" vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="816">
-          <folding />
+          <folding>
+            <element signature="e#742#915#0" expanded="true" />
+            <element signature="e#904#905#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -548,8 +544,10 @@
         <state line="61" column="32" selection-start="1302" selection-end="1303" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="1258">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3821#4200#0" expanded="true" />
-            <element signature="e#4189#4190#0" expanded="true" />
+            <element signature="e#3661#4046#0" expanded="true" />
+            <element signature="e#4035#4036#0" expanded="true" />
+            <element signature="e#5413#5414#0" expanded="true" />
+            <element signature="e#5458#5459#0" expanded="true" />
             <element signature="method#getStatus#0;class#Case#0;class#Grid#0" expanded="true" />
           </folding>
         </state>
@@ -572,21 +570,10 @@
     <entry file="file://$PROJECT_DIR$/../MineSweeperCopy/src/Mines.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="40" column="4" selection-start="922" selection-end="922" vertical-scroll-proportion="0.0" vertical-offset="680" max-vertical-offset="816">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../MineSweeperCopy/src/Mines.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="759" selection-end="759" vertical-scroll-proportion="0.0" vertical-offset="111" max-vertical-offset="731">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../MineSweeperCopy/src/Board.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="221" column="41" selection-start="6448" selection-end="6448" vertical-scroll-proportion="-0.31011608" vertical-offset="3757" max-vertical-offset="5559">
-          <folding />
+          <folding>
+            <element signature="e#742#915#0" expanded="true" />
+            <element signature="e#904#905#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -600,20 +587,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../MineSweeperCopy/src/Mines.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="508" selection-end="508" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="731">
+          <folding>
+            <element signature="e#742#915#0" expanded="true" />
+            <element signature="e#904#905#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../MineSweeperCopy/src/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="221" column="41" selection-start="6448" selection-end="6448" vertical-scroll-proportion="-1.5373135" vertical-offset="4497" max-vertical-offset="5559">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Minesweeper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="227" selection-end="227" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
+        <state line="20" column="39" selection-start="415" selection-end="415" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Grid.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="160" column="36" selection-start="4882" selection-end="4882" vertical-scroll-proportion="0.87396353" vertical-offset="2193" max-vertical-offset="3366">
+        <state line="137" column="4" selection-start="4076" selection-end="4076" vertical-scroll-proportion="0.53898305" vertical-offset="2011" max-vertical-offset="3485">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3821#4200#0" expanded="true" />
-            <element signature="e#4189#4190#0" expanded="true" />
+            <element signature="e#3661#4046#0" expanded="true" />
+            <element signature="e#4035#4036#0" expanded="true" />
+            <element signature="e#5413#5414#0" expanded="true" />
+            <element signature="e#5458#5459#0" expanded="true" />
             <element signature="method#getStatus#0;class#Case#0;class#Grid#0" expanded="true" />
           </folding>
         </state>

@@ -117,12 +117,9 @@ public class Grid extends JPanel  {
         return (x >= 0 && x < row
              && y >= 0 && y < col);
     }
+
+
     public void AI(){
-        ActionListener think = new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                }
-        };
 
         final Timer timer = new Timer(800,null);
         timer.addActionListener(new ActionListener() {
@@ -130,7 +127,7 @@ public class Grid extends JPanel  {
             public void actionPerformed(ActionEvent e) {
                 int ran_x = random.nextInt(row-1);
                 int ran_y = random.nextInt(col-1);
-                play(field[ran_x][ran_y]);
+                play(field[ran_x][ran_y],false);
                 System.out.println("think");
                 if(gameover)
                     timer.stop();
@@ -138,19 +135,26 @@ public class Grid extends JPanel  {
             }
         });
         timer.start();
-
     }
-   public void play(Case current){
-        current.estDecouvert = true;
-        gameover = (current.getStatus()==MINE);
-        gameover = (gameover)? true : game_finish();
-        current.repaint();
+   public void play(Case current,boolean flag){
+       if(flag){
+           current.setStatus(FLAG);
+       }else{
+            current.estDecouvert = true;
+            gameover = (current.getStatus()==MINE);
+            gameover = (gameover)? true : game_finish();
        }
-  public boolean game_finish(){
+       current.repaint();
+   }
+
+    /*Verifie si il reste une case qui n'est pas encore decouverte
+    c'est a dire une case qui n'a pas de flag et qu'on peut jouer
+    * */
+    public boolean game_finish(){
        boolean game_finish = true;
        for(Case[] c : field){
             for(Case elem : c){
-                if(!elem.estDecouvert)
+                if(elem.getStatus()!=FLAG && !elem.estDecouvert )
                     game_finish = false;
             }
        }
@@ -189,7 +193,7 @@ public class Grid extends JPanel  {
             super.mousePressed(e);
            Case current = (Case) e.getSource();
            System.out.println();
-           play(current);
+           play(current,false);
        }
     }
 }
