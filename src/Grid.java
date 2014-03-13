@@ -113,7 +113,8 @@ public class Grid extends JPanel  {
     }
 
     public void AI(){
-        final Timer timer = new Timer(800,null);
+        final Timer timer = new Timer(500,null);
+        //http://stackoverflow.com/questions/3858920/stop-a-swing-timer-from-inside-the-action-listener
         timer.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

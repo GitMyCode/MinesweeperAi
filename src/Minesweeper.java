@@ -61,15 +61,10 @@ public class Minesweeper extends JFrame implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getActionCommand() == "Reset"){
+        if     (e.getActionCommand() == "Reset"){
             System.out.println("reset");
             grid.game();
-            /*grid.removeAll();
-            grid.invalidate();
-            remove(grid);
-            grid= null;
-            createGrid();*/
-        }else if(e.getActionCommand() == "Ai"){
+       }else if(e.getActionCommand() == "Ai"){
             System.out.println("Ai");
             grid.AI();
 

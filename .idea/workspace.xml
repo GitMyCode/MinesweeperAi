@@ -71,17 +71,17 @@
     <splitter split-orientation="horizontal" split-proportion="0.62608695">
       <split-first>
         <leaf>
-          <file leaf-file-name="Grid.java" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="Grid.java" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Grid.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="31" column="13" selection-start="717" selection-end="717" vertical-scroll-proportion="0.0" vertical-offset="1836" max-vertical-offset="4352">
+                <state line="128" column="4" selection-start="4469" selection-end="4469" vertical-scroll-proportion="0.8592715" vertical-offset="1657" max-vertical-offset="4369">
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#3994#4335#0" expanded="true" />
-                    <element signature="e#4324#4325#0" expanded="true" />
-                    <element signature="e#5737#5743#0" expanded="true" />
-                    <element signature="e#8145#8146#0" expanded="true" />
-                    <element signature="e#8171#8172#0" expanded="true" />
+                    <element signature="e#4098#4439#0" expanded="true" />
+                    <element signature="e#4428#4429#0" expanded="true" />
+                    <element signature="e#5841#5847#0" expanded="true" />
+                    <element signature="e#8249#8250#0" expanded="true" />
+                    <element signature="e#8275#8276#0" expanded="true" />
                     <element signature="method#getStatus#0;class#Case#0;class#Grid#0" expanded="true" />
                     <element signature="method#getXpos#0;class#Case#0;class#Grid#0" expanded="true" />
                     <element signature="method#getYpos#0;class#Case#0;class#Grid#0" expanded="true" />
@@ -92,10 +92,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Minesweeper.java" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="Minesweeper.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Minesweeper.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="35" column="32" selection-start="807" selection-end="807" vertical-scroll-proportion="0.39403972" vertical-offset="357" max-vertical-offset="1547">
+                <state line="66" column="45" selection-start="1571" selection-end="1571" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="1462">
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -138,8 +138,8 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/../../AnimationJava/src/DigitalClock.java" />
-        <option value="$PROJECT_DIR$/src/Grid.java" />
         <option value="$PROJECT_DIR$/src/Minesweeper.java" />
+        <option value="$PROJECT_DIR$/src/Grid.java" />
       </list>
     </option>
   </component>
@@ -554,11 +554,11 @@
         <state line="73" column="8" selection-start="2080" selection-end="2080" vertical-scroll-proportion="0.0" vertical-offset="1241" max-vertical-offset="4012">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3994#4335#0" expanded="true" />
-            <element signature="e#4324#4325#0" expanded="true" />
-            <element signature="e#5737#5743#0" expanded="true" />
-            <element signature="e#8145#8146#0" expanded="true" />
-            <element signature="e#8171#8172#0" expanded="true" />
+            <element signature="e#4098#4439#0" expanded="true" />
+            <element signature="e#4428#4429#0" expanded="true" />
+            <element signature="e#5841#5847#0" expanded="true" />
+            <element signature="e#8249#8250#0" expanded="true" />
+            <element signature="e#8275#8276#0" expanded="true" />
             <element signature="method#getStatus#0;class#Case#0;class#Grid#0" expanded="true" />
             <element signature="method#getXpos#0;class#Case#0;class#Grid#0" expanded="true" />
             <element signature="method#getYpos#0;class#Case#0;class#Grid#0" expanded="true" />
@@ -596,11 +596,11 @@
         <state line="177" column="17" selection-start="5430" selection-end="5430" vertical-scroll-proportion="0.0" vertical-offset="2916" max-vertical-offset="3519">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3994#4335#0" expanded="true" />
-            <element signature="e#4324#4325#0" expanded="true" />
-            <element signature="e#5737#5743#0" expanded="true" />
-            <element signature="e#8145#8146#0" expanded="true" />
-            <element signature="e#8171#8172#0" expanded="true" />
+            <element signature="e#4098#4439#0" expanded="true" />
+            <element signature="e#4428#4429#0" expanded="true" />
+            <element signature="e#5841#5847#0" expanded="true" />
+            <element signature="e#8249#8250#0" expanded="true" />
+            <element signature="e#8275#8276#0" expanded="true" />
             <element signature="method#getStatus#0;class#Case#0;class#Grid#0" expanded="true" />
             <element signature="method#getXpos#0;class#Case#0;class#Grid#0" expanded="true" />
             <element signature="method#getYpos#0;class#Case#0;class#Grid#0" expanded="true" />
@@ -638,11 +638,11 @@
         <state line="166" column="26" selection-start="4798" selection-end="4798" vertical-scroll-proportion="0.0" vertical-offset="2559" max-vertical-offset="3604">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3994#4335#0" expanded="true" />
-            <element signature="e#4324#4325#0" expanded="true" />
-            <element signature="e#5737#5743#0" expanded="true" />
-            <element signature="e#8145#8146#0" expanded="true" />
-            <element signature="e#8171#8172#0" expanded="true" />
+            <element signature="e#4098#4439#0" expanded="true" />
+            <element signature="e#4428#4429#0" expanded="true" />
+            <element signature="e#5841#5847#0" expanded="true" />
+            <element signature="e#8249#8250#0" expanded="true" />
+            <element signature="e#8275#8276#0" expanded="true" />
             <element signature="method#getStatus#0;class#Case#0;class#Grid#0" expanded="true" />
             <element signature="method#getXpos#0;class#Case#0;class#Grid#0" expanded="true" />
             <element signature="method#getYpos#0;class#Case#0;class#Grid#0" expanded="true" />
@@ -680,11 +680,11 @@
         <state line="61" column="32" selection-start="1302" selection-end="1303" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="1258">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3994#4335#0" expanded="true" />
-            <element signature="e#4324#4325#0" expanded="true" />
-            <element signature="e#5737#5743#0" expanded="true" />
-            <element signature="e#8145#8146#0" expanded="true" />
-            <element signature="e#8171#8172#0" expanded="true" />
+            <element signature="e#4098#4439#0" expanded="true" />
+            <element signature="e#4428#4429#0" expanded="true" />
+            <element signature="e#5841#5847#0" expanded="true" />
+            <element signature="e#8249#8250#0" expanded="true" />
+            <element signature="e#8275#8276#0" expanded="true" />
             <element signature="method#getStatus#0;class#Case#0;class#Grid#0" expanded="true" />
             <element signature="method#getXpos#0;class#Case#0;class#Grid#0" expanded="true" />
             <element signature="method#getYpos#0;class#Case#0;class#Grid#0" expanded="true" />
@@ -741,30 +741,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Grid.java">
+    <entry file="file://$PROJECT_DIR$/src/Minesweeper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="13" selection-start="717" selection-end="717" vertical-scroll-proportion="0.0" vertical-offset="1836" max-vertical-offset="4352">
+        <state line="66" column="45" selection-start="1571" selection-end="1571" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="1462">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3994#4335#0" expanded="true" />
-            <element signature="e#4324#4325#0" expanded="true" />
-            <element signature="e#5737#5743#0" expanded="true" />
-            <element signature="e#8145#8146#0" expanded="true" />
-            <element signature="e#8171#8172#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Grid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="128" column="4" selection-start="4469" selection-end="4469" vertical-scroll-proportion="0.8592715" vertical-offset="1657" max-vertical-offset="4369">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4098#4439#0" expanded="true" />
+            <element signature="e#4428#4429#0" expanded="true" />
+            <element signature="e#5841#5847#0" expanded="true" />
+            <element signature="e#8249#8250#0" expanded="true" />
+            <element signature="e#8275#8276#0" expanded="true" />
             <element signature="method#getStatus#0;class#Case#0;class#Grid#0" expanded="true" />
             <element signature="method#getXpos#0;class#Case#0;class#Grid#0" expanded="true" />
             <element signature="method#getYpos#0;class#Case#0;class#Grid#0" expanded="true" />
             <element signature="method#setFlag#0;class#Case#0;class#Grid#0" expanded="true" />
             <element signature="method#getFlag#0;class#Case#0;class#Grid#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Minesweeper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="32" selection-start="807" selection-end="807" vertical-scroll-proportion="0.39403972" vertical-offset="357" max-vertical-offset="1547">
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
