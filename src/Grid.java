@@ -64,14 +64,14 @@ public class Grid extends JPanel  {
         random = new Random();
         int ran_x,ran_y;
         status.setText(Integer.toString(nb_mines));
-        for(int i=0; i< nb_mines ; i++){
+        for(int i=0; i< nb_mines ; i++){ //Placer les mines!
             ran_x = random.nextInt(ROW -1);
             ran_y = random.nextInt(COL -1);
-            System.out.println("x: "+ran_x+ " y:"+ran_y);
-            field[ran_x][ran_y].setStatus(MINE);
-        }
+            if  (field[ran_x][ran_y].getStatus()==MINE){i--;} //Si deja une mine on recommence
+            else{field[ran_x][ran_y].setStatus(MINE);} // place la mine
+        }//Fini placement mine
         calculateIndice();
-       // AI();
+        AI();
      }
 
     private void calculateIndice(){
