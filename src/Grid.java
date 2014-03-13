@@ -25,7 +25,7 @@ public class Grid extends JPanel  {
     private Image[] grid_icones;
     private Case[][] field;
     private JLabel status;
-    private int mines_restantes = nb_mines;
+    private int mines_restantes;
     Controller controller;
     boolean gameover = false;
     Random random;
@@ -35,11 +35,27 @@ public class Grid extends JPanel  {
 
     public Grid(JLabel status){
 
-        this.status = status;
-        grid_icones = new Image[13];
+        this.status = status; //reference au jlabel du jframe
+        grid_icones = new Image[13]; // nb d'image
 
 
         controller = new Controller();
+        setLayout(new GridLayout(ROW, COL));
+
+        for(int i=0; i<13; i++){
+            grid_icones[i] = (new ImageIcon("img/j"+i+".gif")).getImage();
+        }
+        setDoubleBuffered(true);
+        game();
+    }
+
+    //Initialise la game
+    public void game(){
+        removeAll();
+        updateUI();
+        gameover = false;
+        mines_restantes = nb_mines;
+        field=null;
         field = new Case[ROW][COL];
         for(int i=0;i< ROW;i++){
             for(int j=0; j< COL; j++){
@@ -50,17 +66,6 @@ public class Grid extends JPanel  {
                 add(field[i][j]);
             }
         }
-        setLayout(new GridLayout(ROW, COL));
-
-        for(int i=0; i<13; i++){
-            grid_icones[i] = (new ImageIcon("img/j"+i+".gif")).getImage();
-        }
-        setDoubleBuffered(true);
-        game();
-    }
-
-
-    private void game(){
         random = new Random();
         int ran_x,ran_y;
         status.setText(Integer.toString(nb_mines));
@@ -70,9 +75,9 @@ public class Grid extends JPanel  {
             if  (field[ran_x][ran_y].getStatus()==MINE){i--;} //Si deja une mine on recommence
             else{field[ran_x][ran_y].setStatus(MINE);} // place la mine
         }//Fini placement mine
-        calculateIndice();
-        AI();
-     }
+        calculateIndice(); // Place les indice autour des mines
+        //  AI();
+    }
 
     private void calculateIndice(){
         int cal_status=0;
@@ -101,7 +106,6 @@ public class Grid extends JPanel  {
              && y >= 0 && y < COL && !field[x][y].estDecouvert);
     }
 
-
     public void AI(){
         final Timer timer = new Timer(800,null);
         timer.addActionListener(new ActionListener() {
@@ -110,15 +114,15 @@ public class Grid extends JPanel  {
                 int ran_x = random.nextInt(ROW -1);
                 int ran_y = random.nextInt(COL -1);
                 play(field[ran_x][ran_y],false);
-                System.out.println("think");
                 if(gameover)
                     timer.stop();
             }
         });
         timer.start();
     }
+
+
    public void play(Case current,boolean flag){
-       System.out.println("play");
        if(!gameover && !(!flag && current.flaged)){ //Si partie pas fini et que la case n'est pas flager
            if(flag && mines_restantes>0 ){
                current.switchFlag();
@@ -126,7 +130,7 @@ public class Grid extends JPanel  {
                gameover =  (game_finish());
            }else{
                current.estDecouvert = true;
-               gameover = (current.getStatus() == MINE) || (game_finish()) || mines_restantes==0;
+               gameover = (current.getStatus() == MINE) || (game_finish());
                if(current.getStatus()==RIEN){
                    ArrayList<Case> voisins = getVoisins(current);
                    for(Case v : voisins){
@@ -135,21 +139,19 @@ public class Grid extends JPanel  {
                }
            }
            current.repaint();
-       }
+           if(gameover){
+               if(game_finish()){status.setText("Game Win!");}
+               else             {status.setText("Game Lost!");}
 
-       if(gameover){
-           if(game_finish()){
-               status.setText("Game Win!");
-           }else{
-               status.setText("Game Lost!");
-           }
-           for(Case[] cases : field){
-               for(Case c : cases){
-                   c.repaint();
+           /* repaint() pour reveler les caes*/
+               for(Case[] cases : field){
+                   for(Case c : cases){c.repaint();}
                }
-           }
+           }//fin gameover
        }
    }
+   /* Va chercher les voisins immediat et les retourne
+    * dans un arraylist */
    public ArrayList<Case> getVoisins(Case c){
        ArrayList<Case> voisins = new ArrayList<Case>();
        int x = c.getXpos();
@@ -165,8 +167,8 @@ public class Grid extends JPanel  {
        return voisins;
     }
 
-    /*Verifie si il reste une case qui n'est pas encore decouverte
-    c'est a dire une case qui n'a pas de flag et qu'on peut jouer
+    /*Verifie si la game est gagné
+     check si tout les flags sont deposer et ensuite si il sont bien deposer
     * */
     public boolean game_finish(){
        boolean gameWin = false;
@@ -183,7 +185,7 @@ public class Grid extends JPanel  {
        }
         return gameWin;
     }
-   ///////////////////////////////////////////////////////////////////////////////////////////////
+   ///////////////////////////////////////  CLASSE CASE  //////////////////////////////////////////////
     private class Case extends JPanel{
         boolean estDecouvert = false;
         int status;
@@ -196,39 +198,35 @@ public class Grid extends JPanel  {
        @Override
         protected void paintComponent(Graphics g) {
            super.paintComponent(g);
-           if(!gameover){
-               System.out.println(status);
+           if(!gameover){ // Si patie en cours
                if(flaged)            {g.drawImage(grid_icones[FLAG],0,0,this);}
                else if(estDecouvert) {g.drawImage(grid_icones[status],0,0,this);}
                else                  {g.drawImage(grid_icones[COUVERTE],0,0,this);}
+
+
            }else{// Si la partie est fini
-               if(status != MINE && flaged){g.drawImage(grid_icones[XFLAG],0,0,this);
-                   System.out.println("xflag");}
+               if(status != MINE && flaged){g.drawImage(grid_icones[XFLAG],0,0,this);}
                else if(flaged)             {g.drawImage(grid_icones[FLAG],0,0,this);}
                else                        {g.drawImage(grid_icones[status],0,0,this);}
            }
        }
 
-       public void setStatus(int new_status){
-           this.status=new_status;
-       }
+
+       /*Setter getter -------------------------*/
+       public void setStatus(int new_status){ this.status=new_status; }
        public int getStatus(){return this.status;}
-
-       public int getXpos(){return this.x;}
-       public int getYpos(){return this.y;}
-
+       public int getXpos(){return this.x;} public int getYpos(){return this.y;}
        public void setFlag(boolean flag){this.flaged = flag;}
        public boolean getFlag(){return this.flaged;}
-
        public void switchFlag(){
            this.flaged = !flaged;
            if(flaged){ mines_restantes--;}
            else      { mines_restantes++;}
        }
+       //////////////////////////////////////
+
     }
-
-
-///////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////// CLASSE CONTROLLER UTILISATEUR///////////////////////////////////////////////
     class Controller extends MouseAdapter{
        @Override
         public void mousePressed(MouseEvent e) {
