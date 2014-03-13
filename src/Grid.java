@@ -12,7 +12,7 @@ public class Grid extends JPanel  {
     private final int ROW = 15;
     private final int COL = 15;
     private final int total_cells = 16;
-    private final int nb_mines = 3;
+    private final int nb_mines = 10;
     private final int CELL_SIZE = 15;
 
 
@@ -123,7 +123,7 @@ public class Grid extends JPanel  {
            if(flag && mines_restantes>0 ){
                current.switchFlag();
                status.setText(Integer.toString(mines_restantes));
-               gameover =  (game_finish()) || mines_restantes==0;
+               gameover =  (game_finish());
            }else{
                current.estDecouvert = true;
                gameover = (current.getStatus() == MINE) || (game_finish()) || mines_restantes==0;
@@ -174,8 +174,8 @@ public class Grid extends JPanel  {
            gameWin = true;
            for(Case[] c : field){
                for(Case elem : c){
-                   if( (elem.getStatus() == MINE && !elem.getFlag()) //Si une mine n'est pas flagger
-                           || elem.estDecouvert == false ) // ou Si un element n'est pas decouvert
+                   if((elem.getStatus() == MINE && !elem.getFlag()) //Si une mine n'est pas flagger
+                   || (elem.estDecouvert == false && !elem.getFlag())) // ou Si un element n'est pas decouvert
                        gameWin = false;
                    break;
                }
