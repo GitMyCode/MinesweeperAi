@@ -16,7 +16,10 @@ public class Minesweeper extends JFrame implements ActionListener{
     private JPanel menu;
     private final JLabel status;
     private JButton reset;
+    private JButton Ai;
+
     private Grid grid;
+
     public Minesweeper(){
 
         setSize(WIDTH,HEIGHT);
@@ -28,10 +31,15 @@ public class Minesweeper extends JFrame implements ActionListener{
         status = new JLabel("");
         status.setSize(50,30);
 
+        Ai = new JButton("Ai");
+        Ai.setSize(30,30);
+        Ai.addActionListener(this);
+
         menu = new JPanel();
         menu.setLayout(new GridLayout(1, 0));
 
         menu.add(status, BorderLayout.SOUTH);
+        menu.add(Ai,BorderLayout.SOUTH);
         menu.add(reset, BorderLayout.SOUTH);
         add(menu,BorderLayout.SOUTH);
 
@@ -61,6 +69,10 @@ public class Minesweeper extends JFrame implements ActionListener{
             remove(grid);
             grid= null;
             createGrid();*/
+        }else if(e.getActionCommand() == "Ai"){
+            System.out.println("Ai");
+            grid.AI();
+
         }
     }
 

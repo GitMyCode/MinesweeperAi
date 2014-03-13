@@ -41,8 +41,10 @@ public class Grid extends JPanel  {
         controller = new Controller();
         setLayout(new GridLayout(ROW, COL));
 
-        for(int i=0; i<13; i++){
-            grid_icones[i] = (new ImageIcon("img/j"+i+".gif")).getImage();
+        for(int i=0; i<13; i++){//I:\Dropbox\PROJETS\CSGAME\Minesweeper\img /I/Dropbox/PROJETS/CSGAME/Minesweeper/
+            //grid_icones[i] = (new ImageIcon(("img/j"+i+".gif"))).getImage();
+            java.net.URL imageUrl = getClass().getResource("img/j"+i+".gif");
+            grid_icones[i] = (new ImageIcon(imageUrl)).getImage();
         }
         setDoubleBuffered(true);
         game();

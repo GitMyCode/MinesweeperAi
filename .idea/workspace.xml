@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Minesweeper:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="3bd5444d-dfee-49b0-afc5-05259726d039" name="Default" comment="" />
     <ignored path="Minesweeper.iws" />
@@ -63,20 +68,20 @@
     <favorites_list name="Minesweeper" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.62608695">
       <split-first>
         <leaf>
-          <file leaf-file-name="Grid.java" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="Grid.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Grid.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="28" column="28" selection-start="682" selection-end="682" vertical-scroll-proportion="0.80541456" vertical-offset="0" max-vertical-offset="4318">
+                <state line="31" column="13" selection-start="717" selection-end="717" vertical-scroll-proportion="0.0" vertical-offset="1836" max-vertical-offset="4352">
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#3763#4104#0" expanded="true" />
-                    <element signature="e#4093#4094#0" expanded="true" />
-                    <element signature="e#5506#5512#0" expanded="true" />
-                    <element signature="e#7914#7915#0" expanded="true" />
-                    <element signature="e#7940#7941#0" expanded="true" />
+                    <element signature="e#3994#4335#0" expanded="true" />
+                    <element signature="e#4324#4325#0" expanded="true" />
+                    <element signature="e#5737#5743#0" expanded="true" />
+                    <element signature="e#8145#8146#0" expanded="true" />
+                    <element signature="e#8171#8172#0" expanded="true" />
                     <element signature="method#getStatus#0;class#Case#0;class#Grid#0" expanded="true" />
                     <element signature="method#getXpos#0;class#Case#0;class#Grid#0" expanded="true" />
                     <element signature="method#getYpos#0;class#Case#0;class#Grid#0" expanded="true" />
@@ -87,11 +92,13 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Minesweeper.java" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="Minesweeper.java" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Minesweeper.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="31" column="44" selection-start="763" selection-end="763" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1275">
-                  <folding />
+                <state line="35" column="32" selection-start="807" selection-end="807" vertical-scroll-proportion="0.39403972" vertical-offset="357" max-vertical-offset="1547">
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -103,7 +110,7 @@
           <file leaf-file-name="Board.java" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/../MineSweeperCopy/src/Board.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="70" column="29" selection-start="1645" selection-end="1645" vertical-scroll-proportion="0.2963576" vertical-offset="824" max-vertical-offset="5559">
+                <state line="70" column="29" selection-start="1645" selection-end="1645" vertical-scroll-proportion="0.30287647" vertical-offset="824" max-vertical-offset="5559">
                   <folding />
                 </state>
               </provider>
@@ -131,8 +138,8 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/../../AnimationJava/src/DigitalClock.java" />
-        <option value="$PROJECT_DIR$/src/Minesweeper.java" />
         <option value="$PROJECT_DIR$/src/Grid.java" />
+        <option value="$PROJECT_DIR$/src/Minesweeper.java" />
       </list>
     </option>
   </component>
@@ -260,13 +267,13 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Chemin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/META-INF" />
     <property name="recentsLimit" value="5" />
     <property name="dynamic.classpath" value="false" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunManager" selected="Application.Minesweeper">
@@ -547,11 +554,11 @@
         <state line="73" column="8" selection-start="2080" selection-end="2080" vertical-scroll-proportion="0.0" vertical-offset="1241" max-vertical-offset="4012">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3763#4104#0" expanded="true" />
-            <element signature="e#4093#4094#0" expanded="true" />
-            <element signature="e#5506#5512#0" expanded="true" />
-            <element signature="e#7914#7915#0" expanded="true" />
-            <element signature="e#7940#7941#0" expanded="true" />
+            <element signature="e#3994#4335#0" expanded="true" />
+            <element signature="e#4324#4325#0" expanded="true" />
+            <element signature="e#5737#5743#0" expanded="true" />
+            <element signature="e#8145#8146#0" expanded="true" />
+            <element signature="e#8171#8172#0" expanded="true" />
             <element signature="method#getStatus#0;class#Case#0;class#Grid#0" expanded="true" />
             <element signature="method#getXpos#0;class#Case#0;class#Grid#0" expanded="true" />
             <element signature="method#getYpos#0;class#Case#0;class#Grid#0" expanded="true" />
@@ -564,7 +571,9 @@
     <entry file="file://$PROJECT_DIR$/src/Minesweeper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="31" selection-start="374" selection-end="374" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="714">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -587,11 +596,11 @@
         <state line="177" column="17" selection-start="5430" selection-end="5430" vertical-scroll-proportion="0.0" vertical-offset="2916" max-vertical-offset="3519">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3763#4104#0" expanded="true" />
-            <element signature="e#4093#4094#0" expanded="true" />
-            <element signature="e#5506#5512#0" expanded="true" />
-            <element signature="e#7914#7915#0" expanded="true" />
-            <element signature="e#7940#7941#0" expanded="true" />
+            <element signature="e#3994#4335#0" expanded="true" />
+            <element signature="e#4324#4325#0" expanded="true" />
+            <element signature="e#5737#5743#0" expanded="true" />
+            <element signature="e#8145#8146#0" expanded="true" />
+            <element signature="e#8171#8172#0" expanded="true" />
             <element signature="method#getStatus#0;class#Case#0;class#Grid#0" expanded="true" />
             <element signature="method#getXpos#0;class#Case#0;class#Grid#0" expanded="true" />
             <element signature="method#getYpos#0;class#Case#0;class#Grid#0" expanded="true" />
@@ -604,7 +613,9 @@
     <entry file="file://$PROJECT_DIR$/src/Minesweeper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="39" selection-start="415" selection-end="415" vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="714">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -627,11 +638,11 @@
         <state line="166" column="26" selection-start="4798" selection-end="4798" vertical-scroll-proportion="0.0" vertical-offset="2559" max-vertical-offset="3604">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3763#4104#0" expanded="true" />
-            <element signature="e#4093#4094#0" expanded="true" />
-            <element signature="e#5506#5512#0" expanded="true" />
-            <element signature="e#7914#7915#0" expanded="true" />
-            <element signature="e#7940#7941#0" expanded="true" />
+            <element signature="e#3994#4335#0" expanded="true" />
+            <element signature="e#4324#4325#0" expanded="true" />
+            <element signature="e#5737#5743#0" expanded="true" />
+            <element signature="e#8145#8146#0" expanded="true" />
+            <element signature="e#8171#8172#0" expanded="true" />
             <element signature="method#getStatus#0;class#Case#0;class#Grid#0" expanded="true" />
             <element signature="method#getXpos#0;class#Case#0;class#Grid#0" expanded="true" />
             <element signature="method#getYpos#0;class#Case#0;class#Grid#0" expanded="true" />
@@ -644,7 +655,9 @@
     <entry file="file://$PROJECT_DIR$/src/Minesweeper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="0" selection-start="599" selection-end="599" vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="714">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -667,11 +680,11 @@
         <state line="61" column="32" selection-start="1302" selection-end="1303" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="1258">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3763#4104#0" expanded="true" />
-            <element signature="e#4093#4094#0" expanded="true" />
-            <element signature="e#5506#5512#0" expanded="true" />
-            <element signature="e#7914#7915#0" expanded="true" />
-            <element signature="e#7940#7941#0" expanded="true" />
+            <element signature="e#3994#4335#0" expanded="true" />
+            <element signature="e#4324#4325#0" expanded="true" />
+            <element signature="e#5737#5743#0" expanded="true" />
+            <element signature="e#8145#8146#0" expanded="true" />
+            <element signature="e#8171#8172#0" expanded="true" />
             <element signature="method#getStatus#0;class#Case#0;class#Grid#0" expanded="true" />
             <element signature="method#getXpos#0;class#Case#0;class#Grid#0" expanded="true" />
             <element signature="method#getYpos#0;class#Case#0;class#Grid#0" expanded="true" />
@@ -684,7 +697,9 @@
     <entry file="file://$PROJECT_DIR$/src/Minesweeper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="39" selection-start="415" selection-end="415" vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="799">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -721,33 +736,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../MineSweeperCopy/src/Board.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="29" selection-start="1645" selection-end="1645" vertical-scroll-proportion="0.2963576" vertical-offset="824" max-vertical-offset="5559">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Minesweeper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="44" selection-start="763" selection-end="763" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1275">
+        <state line="70" column="29" selection-start="1645" selection-end="1645" vertical-scroll-proportion="0.30287647" vertical-offset="824" max-vertical-offset="5559">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Grid.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="28" selection-start="682" selection-end="682" vertical-scroll-proportion="0.80541456" vertical-offset="0" max-vertical-offset="4318">
+        <state line="31" column="13" selection-start="717" selection-end="717" vertical-scroll-proportion="0.0" vertical-offset="1836" max-vertical-offset="4352">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3763#4104#0" expanded="true" />
-            <element signature="e#4093#4094#0" expanded="true" />
-            <element signature="e#5506#5512#0" expanded="true" />
-            <element signature="e#7914#7915#0" expanded="true" />
-            <element signature="e#7940#7941#0" expanded="true" />
+            <element signature="e#3994#4335#0" expanded="true" />
+            <element signature="e#4324#4325#0" expanded="true" />
+            <element signature="e#5737#5743#0" expanded="true" />
+            <element signature="e#8145#8146#0" expanded="true" />
+            <element signature="e#8171#8172#0" expanded="true" />
             <element signature="method#getStatus#0;class#Case#0;class#Grid#0" expanded="true" />
             <element signature="method#getXpos#0;class#Case#0;class#Grid#0" expanded="true" />
             <element signature="method#getYpos#0;class#Case#0;class#Grid#0" expanded="true" />
             <element signature="method#setFlag#0;class#Case#0;class#Grid#0" expanded="true" />
             <element signature="method#getFlag#0;class#Case#0;class#Grid#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Minesweeper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="32" selection-start="807" selection-end="807" vertical-scroll-proportion="0.39403972" vertical-offset="357" max-vertical-offset="1547">
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -758,10 +775,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>Minesweeper:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
