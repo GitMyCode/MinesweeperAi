@@ -1,5 +1,3 @@
-import sun.net.www.content.text.plain;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -10,11 +8,11 @@ import java.util.Random;
  */
 public class Grid extends JPanel  {
 
-    private int row = 15;
-    private int col = 15;
-    private int total_cells = 16;
-    private int nb_mines = 30;
-    private final int  CELL_SIZE = 15;
+    private final int ROW = 15;
+    private final int COL = 15;
+    private final int total_cells = 16;
+    private final int nb_mines = 30;
+    private final int CELL_SIZE = 15;
 
 
     private final int RIEN = 0;
@@ -26,6 +24,7 @@ public class Grid extends JPanel  {
     private Image[] grid_icones;
     private Case[][] field;
     private JLabel status;
+    private int mines_restantes = nb_mines;
     Controller controller;
     boolean gameover = false;
     Random random;
@@ -40,9 +39,9 @@ public class Grid extends JPanel  {
 
 
         controller = new Controller();
-        field = new Case[row][col];
-        for(int i=0;i<row;i++){
-            for(int j=0; j<col; j++){
+        field = new Case[ROW][COL];
+        for(int i=0;i< ROW;i++){
+            for(int j=0; j< COL; j++){
                 field[i][j] = new Case();
                 field[i][j].x = i;
                 field[i][j].y = j;
@@ -50,7 +49,7 @@ public class Grid extends JPanel  {
                 add(field[i][j]);
             }
         }
-        setLayout(new GridLayout(row,col));
+        setLayout(new GridLayout(ROW, COL));
 
         for(int i=0; i<13; i++){
             grid_icones[i] = (new ImageIcon("img/j"+i+".gif")).getImage();
@@ -66,8 +65,8 @@ public class Grid extends JPanel  {
         int ran_x,ran_y;
         status.setText(Integer.toString(nb_mines));
         for(int i=0; i< nb_mines ; i++){
-            ran_x = random.nextInt(row-1);
-            ran_y = random.nextInt(col-1);
+            ran_x = random.nextInt(ROW -1);
+            ran_y = random.nextInt(COL -1);
             System.out.println("x: "+ran_x+ " y:"+ran_y);
             field[ran_x][ran_y].setStatus(MINE);
         }
@@ -77,8 +76,8 @@ public class Grid extends JPanel  {
 
     private void calculateIndice(){
         int cal_status=0;
-        for(int i=0; i < row; i++){
-            for(int j=0; j< col; j++){
+        for(int i=0; i < ROW; i++){
+            for(int j=0; j< COL; j++){
                if(field[i][j].getStatus() != MINE){
                     if(estValide(i+1,j)){
                         cal_status+=  (field[i+1][j].getStatus() == MINE) ? 1 : 0; //North
@@ -114,8 +113,8 @@ public class Grid extends JPanel  {
     }
 
     private boolean estValide(int x, int y){
-        return (x >= 0 && x < row
-             && y >= 0 && y < col);
+        return (x >= 0 && x < ROW
+             && y >= 0 && y < COL);
     }
 
 
@@ -125,9 +124,9 @@ public class Grid extends JPanel  {
         timer.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                int ran_x = random.nextInt(row-1);
-                int ran_y = random.nextInt(col-1);
-                play(field[ran_x][ran_y],false);
+                int ran_x = random.nextInt(ROW -1);
+                int ran_y = random.nextInt(COL -1);
+                play(field[ran_x][ran_y],true);
                 System.out.println("think");
                 if(gameover)
                     timer.stop();
@@ -139,6 +138,9 @@ public class Grid extends JPanel  {
    public void play(Case current,boolean flag){
        if(flag){
            current.setStatus(FLAG);
+           this.mines_restantes--;
+           status.setText(Integer.toString(mines_restantes));
+
        }else{
             current.estDecouvert = true;
             gameover = (current.getStatus()==MINE);
@@ -171,7 +173,7 @@ public class Grid extends JPanel  {
        @Override
         protected void paintComponent(Graphics g) {
             super.paintComponent(g);
-            if(estDecouvert){
+            if(estDecouvert || status == FLAG){
                 g.drawImage(grid_icones[status],0,0,this);
             }else{
                 g.drawImage(grid_icones[COUVERTE],0,0,this);
