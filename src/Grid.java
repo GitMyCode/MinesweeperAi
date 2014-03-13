@@ -1,6 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.util.ArrayList;
 import java.util.Random;
 
 /**
@@ -71,7 +72,7 @@ public class Grid extends JPanel  {
             field[ran_x][ran_y].setStatus(MINE);
         }
         calculateIndice();
-        AI();
+       // AI();
      }
 
     private void calculateIndice(){
@@ -114,7 +115,8 @@ public class Grid extends JPanel  {
 
     private boolean estValide(int x, int y){
         return (x >= 0 && x < ROW
-             && y >= 0 && y < COL);
+             && y >= 0 && y < COL && !field[x][y].estDecouvert);
+
     }
 
 
@@ -126,7 +128,7 @@ public class Grid extends JPanel  {
             public void actionPerformed(ActionEvent e) {
                 int ran_x = random.nextInt(ROW -1);
                 int ran_y = random.nextInt(COL -1);
-                play(field[ran_x][ran_y],true);
+                play(field[ran_x][ran_y],false);
                 System.out.println("think");
                 if(gameover)
                     timer.stop();
@@ -145,9 +147,31 @@ public class Grid extends JPanel  {
             current.estDecouvert = true;
             gameover = (current.getStatus()==MINE);
             gameover = (gameover)? true : game_finish();
+
+           if(current.getStatus()==RIEN){
+               ArrayList<Case> voisins = getVoisins(current);
+               for(Case v : voisins){
+                   play(v,false);
+               }
+           }
+
        }
        current.repaint();
    }
+   public ArrayList<Case> getVoisins(Case c){
+       ArrayList<Case> voisins = new ArrayList<Case>();
+       int x = c.getXpos();
+       int y = c.getYpos();
+       if(estValide(x+1,y))      voisins.add(field[x+1][y]);
+       if(estValide(x+1,y-1))    voisins.add(field[x+1][y-1]);
+       if(estValide(x+1,y+1))    voisins.add(field[x+1][y+1]);
+       if(estValide(x,y-1))      voisins.add(field[x][y-1]);
+       if(estValide(x,y+1))      voisins.add(field[x][y+1]);
+       if(estValide(x-1,y))      voisins.add(field[x-1][y]);
+       if(estValide(x-1,y-1))    voisins.add(field[x-1][y-1]);
+       if(estValide(x-1,y+1))    voisins.add(field[x-1][y+1]);
+       return voisins;
+    }
 
     /*Verifie si il reste une case qui n'est pas encore decouverte
     c'est a dire une case qui n'a pas de flag et qu'on peut jouer
@@ -185,7 +209,13 @@ public class Grid extends JPanel  {
 
        }
        public int getStatus(){return this.status;}
+
+       public int getXpos(){return this.x;}
+       public int getYpos(){return this.y;}
+
+
     }
+
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
     class Controller extends MouseAdapter{
@@ -194,7 +224,6 @@ public class Grid extends JPanel  {
         public void mousePressed(MouseEvent e) {
             super.mousePressed(e);
            Case current = (Case) e.getSource();
-           System.out.println();
            play(current,false);
        }
     }
