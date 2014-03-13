@@ -10,7 +10,7 @@ import java.util.EventListener;
 public class Minesweeper extends JFrame implements ActionListener{
 
     private final int WIDTH = 260;
-    private final int HEIGHT = 280;
+    private final int HEIGHT = 290;
 
 
     private JPanel menu;
