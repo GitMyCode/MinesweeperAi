@@ -12,7 +12,7 @@ public class Grid extends JPanel  {
     private final int ROW = 15;
     private final int COL = 15;
     private final int TOTAL_CELLS = 16;
-    private final int NB_MINES = 30;
+    private final int NB_MINES = 3 ;
 
 
     private final int RIEN = 0;
@@ -131,14 +131,21 @@ public class Grid extends JPanel  {
 
     /*S'occuper de la mecanique d'un coup dans le jeu*/
     public void play(Case current,boolean flag){
+
+        if(flag && current.flaged){
+            current.switchFlag();
+            current.repaint();
+            status.setText(Integer.toString(mines_restantes));
+            return;}
         if(!gameover && !(!flag && current.flaged)){ //Si partie pas fini et que la case n'est pas flager
             if(flag && mines_restantes>0 ){
                 current.switchFlag();
                 status.setText(Integer.toString(mines_restantes));
-                gameover =  (game_finish());
+                gameover =  (gameWin());
+                System.out.println(gameover);
             }else{
                 current.estDecouvert = true;
-                gameover = (current.getStatus() == MINE) || (game_finish());
+                gameover = (current.getStatus() == MINE) || (gameWin());
                 if(current.getStatus()==RIEN){
                     ArrayList<Case> voisins = getVoisins(current);
                     for(Case v : voisins){
@@ -148,7 +155,7 @@ public class Grid extends JPanel  {
             }
             current.repaint();
             if(gameover){
-                if(game_finish()){status.setText("Game Win!");}
+                if(gameWin()){status.setText("Game Win!");}
                 else             {status.setText("Game Lost!");}
 
            /* repaint() pour reveler les caes*/
@@ -178,19 +185,21 @@ public class Grid extends JPanel  {
     /*Verifie si la game est gagné
      check si tout les flags sont deposer et ensuite si il sont bien deposer
     * */
-    public boolean game_finish(){
-        boolean gameWin = false;
+    public boolean gameWin(){
+        boolean gameWin = true;
         if(mines_restantes == 0){
-            gameWin = true;
-            for(Case[] c : field){
-                for(Case elem : c){
-                    if((elem.getStatus() == MINE && !elem.getFlag()) //Si une mine n'est pas flagger
-                            || (elem.estDecouvert == false && !elem.getFlag())) // ou Si un element n'est pas decouvert
+            for(int i=0; i< ROW; i++){
+                for(int j =0 ;j< COL ;j++){
+                    System.out.println(i +" "+j);
+                    if(  (field[i][j].getStatus() == MINE && !field[i][j].getFlag()) //Si une mine n'est pas flagger
+                      || (field[i][j].estDecouvert == false && !field[i][j].getFlag())){ // ou Si un element n'est pas decouvert
                         gameWin = false;
-                    break;
+                        break;
+                    }
                 }
             }
-        }
+        }else{gameWin = false;}
+
         return gameWin;
     }
     ///////////////////////////////////////  CLASSE CASE  //////////////////////////////////////////////

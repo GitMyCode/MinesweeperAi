@@ -68,66 +68,31 @@
     <favorites_list name="Minesweeper" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.62608695">
-      <split-first>
-        <leaf>
-          <file leaf-file-name="Grid.java" pinned="false" current="true" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/Grid.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="128" column="4" selection-start="4469" selection-end="4469" vertical-scroll-proportion="0.8592715" vertical-offset="1657" max-vertical-offset="4369">
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#4098#4439#0" expanded="true" />
-                    <element signature="e#4428#4429#0" expanded="true" />
-                    <element signature="e#5841#5847#0" expanded="true" />
-                    <element signature="e#8249#8250#0" expanded="true" />
-                    <element signature="e#8275#8276#0" expanded="true" />
-                    <element signature="method#getStatus#0;class#Case#0;class#Grid#0" expanded="true" />
-                    <element signature="method#getXpos#0;class#Case#0;class#Grid#0" expanded="true" />
-                    <element signature="method#getYpos#0;class#Case#0;class#Grid#0" expanded="true" />
-                    <element signature="method#setFlag#0;class#Case#0;class#Grid#0" expanded="true" />
-                    <element signature="method#getFlag#0;class#Case#0;class#Grid#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Minesweeper.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Minesweeper.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="66" column="45" selection-start="1571" selection-end="1571" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="1462">
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="Board.java" pinned="false" current="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/../MineSweeperCopy/src/Board.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="70" column="29" selection-start="1645" selection-end="1645" vertical-scroll-proportion="0.30287647" vertical-offset="824" max-vertical-offset="5559">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Mines.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/../MineSweeperCopy/src/Mines.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="22" column="0" selection-start="508" selection-end="508" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="Grid.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Grid.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="136" column="29" selection-start="4678" selection-end="4678" vertical-scroll-proportion="0.66225165" vertical-offset="1861" max-vertical-offset="4471">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#6061#6067#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Minesweeper.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Minesweeper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="23" selection-start="348" selection-end="348" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1462">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -194,6 +159,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -202,58 +169,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Minesweeper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MineSweeperCopy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Minesweeper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MineSweeperCopy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Minesweeper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AnimationJava" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Minesweeper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AnimationJava" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -267,14 +184,15 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/META-INF" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="recentsLimit" value="5" />
     <property name="dynamic.classpath" value="false" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="FullScreen" value="false" />
   </component>
   <component name="RunManager" selected="Application.Minesweeper">
     <configuration default="false" name="Minesweeper" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -289,7 +207,13 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="Minesweeper" />
       <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -509,7 +433,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3991462" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -551,19 +475,76 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Grid.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="30" selection-start="224" selection-end="224" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4369">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#6061#6067#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Minesweeper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="0" selection-start="1339" selection-end="1339" vertical-scroll-proportion="0.0" vertical-offset="807" max-vertical-offset="1462">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../MineSweeperCopy/src/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="29" selection-start="1645" selection-end="1645" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5746">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../MineSweeperCopy/src/Mines.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="508" selection-end="508" vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="816">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Grid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="116" column="73" selection-start="4035" selection-end="4035" vertical-scroll-proportion="0.0" vertical-offset="1963" max-vertical-offset="4369">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#6061#6067#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Minesweeper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="24" selection-start="483" selection-end="483" vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="1462">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../MineSweeperCopy/src/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="29" selection-start="1645" selection-end="1645" vertical-scroll-proportion="0.0" vertical-offset="1190" max-vertical-offset="5746">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../MineSweeperCopy/src/Mines.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="508" selection-end="508" vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="816">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Grid.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state line="73" column="8" selection-start="2080" selection-end="2080" vertical-scroll-proportion="0.0" vertical-offset="1241" max-vertical-offset="4012">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4098#4439#0" expanded="true" />
-            <element signature="e#4428#4429#0" expanded="true" />
-            <element signature="e#5841#5847#0" expanded="true" />
-            <element signature="e#8249#8250#0" expanded="true" />
-            <element signature="e#8275#8276#0" expanded="true" />
-            <element signature="method#getStatus#0;class#Case#0;class#Grid#0" expanded="true" />
-            <element signature="method#getXpos#0;class#Case#0;class#Grid#0" expanded="true" />
-            <element signature="method#getYpos#0;class#Case#0;class#Grid#0" expanded="true" />
-            <element signature="method#setFlag#0;class#Case#0;class#Grid#0" expanded="true" />
-            <element signature="method#getFlag#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="e#6061#6067#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -596,16 +577,7 @@
         <state line="177" column="17" selection-start="5430" selection-end="5430" vertical-scroll-proportion="0.0" vertical-offset="2916" max-vertical-offset="3519">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4098#4439#0" expanded="true" />
-            <element signature="e#4428#4429#0" expanded="true" />
-            <element signature="e#5841#5847#0" expanded="true" />
-            <element signature="e#8249#8250#0" expanded="true" />
-            <element signature="e#8275#8276#0" expanded="true" />
-            <element signature="method#getStatus#0;class#Case#0;class#Grid#0" expanded="true" />
-            <element signature="method#getXpos#0;class#Case#0;class#Grid#0" expanded="true" />
-            <element signature="method#getYpos#0;class#Case#0;class#Grid#0" expanded="true" />
-            <element signature="method#setFlag#0;class#Case#0;class#Grid#0" expanded="true" />
-            <element signature="method#getFlag#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="e#6061#6067#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -638,16 +610,7 @@
         <state line="166" column="26" selection-start="4798" selection-end="4798" vertical-scroll-proportion="0.0" vertical-offset="2559" max-vertical-offset="3604">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4098#4439#0" expanded="true" />
-            <element signature="e#4428#4429#0" expanded="true" />
-            <element signature="e#5841#5847#0" expanded="true" />
-            <element signature="e#8249#8250#0" expanded="true" />
-            <element signature="e#8275#8276#0" expanded="true" />
-            <element signature="method#getStatus#0;class#Case#0;class#Grid#0" expanded="true" />
-            <element signature="method#getXpos#0;class#Case#0;class#Grid#0" expanded="true" />
-            <element signature="method#getYpos#0;class#Case#0;class#Grid#0" expanded="true" />
-            <element signature="method#setFlag#0;class#Case#0;class#Grid#0" expanded="true" />
-            <element signature="method#getFlag#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="e#6061#6067#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -680,16 +643,7 @@
         <state line="61" column="32" selection-start="1302" selection-end="1303" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="1258">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4098#4439#0" expanded="true" />
-            <element signature="e#4428#4429#0" expanded="true" />
-            <element signature="e#5841#5847#0" expanded="true" />
-            <element signature="e#8249#8250#0" expanded="true" />
-            <element signature="e#8275#8276#0" expanded="true" />
-            <element signature="method#getStatus#0;class#Case#0;class#Grid#0" expanded="true" />
-            <element signature="method#getXpos#0;class#Case#0;class#Grid#0" expanded="true" />
-            <element signature="method#getYpos#0;class#Case#0;class#Grid#0" expanded="true" />
-            <element signature="method#setFlag#0;class#Case#0;class#Grid#0" expanded="true" />
-            <element signature="method#getFlag#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="e#6061#6067#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -719,31 +673,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../../AnimationJava/src/DigitalClock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="33" selection-start="370" selection-end="370" vertical-scroll-proportion="0.0" vertical-offset="230" max-vertical-offset="833">
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="imports" expanded="false" />
-          </folding>
+        <state line="15" column="33" selection-start="370" selection-end="370" vertical-scroll-proportion="0.0" vertical-offset="230" max-vertical-offset="833" />
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.6.0_43/src.zip!/java/util/EventListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="17" selection-start="298" selection-end="298" vertical-scroll-proportion="0.22516556" vertical-offset="0" max-vertical-offset="604" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../MineSweeperCopy/src/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="29" selection-start="1645" selection-end="1645" vertical-scroll-proportion="-0.20777778" vertical-offset="1190" max-vertical-offset="5559">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../MineSweeperCopy/src/Mines.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="508" selection-end="508" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="731">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../MineSweeperCopy/src/Board.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="29" selection-start="1645" selection-end="1645" vertical-scroll-proportion="0.30287647" vertical-offset="824" max-vertical-offset="5559">
+        <state line="22" column="0" selection-start="508" selection-end="508" vertical-scroll-proportion="0.31653887" vertical-offset="0" max-vertical-offset="913">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Minesweeper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="45" selection-start="1571" selection-end="1571" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="1462">
+        <state line="15" column="23" selection-start="348" selection-end="348" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1462">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -752,19 +706,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Grid.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="128" column="4" selection-start="4469" selection-end="4469" vertical-scroll-proportion="0.8592715" vertical-offset="1657" max-vertical-offset="4369">
+        <state line="136" column="29" selection-start="4678" selection-end="4678" vertical-scroll-proportion="0.66225165" vertical-offset="1861" max-vertical-offset="4471">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4098#4439#0" expanded="true" />
-            <element signature="e#4428#4429#0" expanded="true" />
-            <element signature="e#5841#5847#0" expanded="true" />
-            <element signature="e#8249#8250#0" expanded="true" />
-            <element signature="e#8275#8276#0" expanded="true" />
-            <element signature="method#getStatus#0;class#Case#0;class#Grid#0" expanded="true" />
-            <element signature="method#getXpos#0;class#Case#0;class#Grid#0" expanded="true" />
-            <element signature="method#getYpos#0;class#Case#0;class#Grid#0" expanded="true" />
-            <element signature="method#setFlag#0;class#Case#0;class#Grid#0" expanded="true" />
-            <element signature="method#getFlag#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="e#6061#6067#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -780,7 +725,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -828,6 +772,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
