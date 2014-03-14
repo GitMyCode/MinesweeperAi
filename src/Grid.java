@@ -190,7 +190,6 @@ public class Grid extends JPanel  {
         if(mines_restantes == 0){
             for(int i=0; i< ROW; i++){
                 for(int j =0 ;j< COL ;j++){
-                    System.out.println(i +" "+j);
                     if(  (field[i][j].getStatus() == MINE && !field[i][j].getFlag()) //Si une mine n'est pas flagger
                       || (field[i][j].estDecouvert == false && !field[i][j].getFlag())){ // ou Si un element n'est pas decouvert
                         gameWin = false;
