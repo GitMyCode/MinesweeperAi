@@ -60,6 +60,53 @@
       </breakpoint>
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/src/Grid.java" line="275" class="Grid" package="">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/Grid.java" line="327" class="Grid" package="">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/Grid.java" line="379" class="Grid" package="">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -72,9 +119,21 @@
       <file leaf-file-name="Grid.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Grid.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="315" column="19" selection-start="11532" selection-end="11532" vertical-scroll-proportion="0.92574257" vertical-offset="4692" max-vertical-offset="7803">
+            <state line="360" column="29" selection-start="13024" selection-end="13024" vertical-scroll-proportion="0.51" vertical-offset="5746" max-vertical-offset="8534">
               <folding>
-                <element signature="e#7944#7950#0" expanded="true" />
+                <element signature="e#894#900#0" expanded="true" />
+                <element signature="e#950#956#0" expanded="true" />
+                <element signature="e#6265#6271#0" expanded="true" />
+                <element signature="e#14041#14047#0" expanded="true" />
+                <element signature="e#15418#15955#0" expanded="true" />
+                <element signature="e#15944#15945#0" expanded="true" />
+                <element signature="e#17958#17959#0" expanded="true" />
+                <element signature="e#17984#17985#0" expanded="true" />
+                <element signature="method#getStatus#0;class#Case#0;class#Grid#0" expanded="true" />
+                <element signature="method#getXpos#0;class#Case#0;class#Grid#0" expanded="true" />
+                <element signature="method#getYpos#0;class#Case#0;class#Grid#0" expanded="true" />
+                <element signature="method#setFlag#0;class#Case#0;class#Grid#0" expanded="true" />
+                <element signature="method#getFlag#0;class#Case#0;class#Grid#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -83,7 +142,7 @@
       <file leaf-file-name="Minesweeper.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Minesweeper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="105" column="53" selection-start="2622" selection-end="2622" vertical-scroll-proportion="0.0" vertical-offset="1417" max-vertical-offset="2125">
+            <state line="105" column="47" selection-start="2616" selection-end="2616" vertical-scroll-proportion="0.0" vertical-offset="1785" max-vertical-offset="2176">
               <folding />
             </state>
           </provider>
@@ -106,8 +165,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1560" />
-    <option name="height" value="1050" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1066" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -154,7 +215,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -163,33 +224,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Minesweeper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MineSweeper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Minesweeper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MineSweeper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -203,7 +240,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/META-INF" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Chemin" />
     <property name="recentsLimit" value="5" />
     <property name="dynamic.classpath" value="false" />
     <property name="OverrideImplement.combined" value="true" />
@@ -224,7 +261,7 @@
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="MineSweeper" />
+      <module name="Minesweeper" />
       <envs />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="" />
@@ -301,19 +338,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -339,6 +363,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -443,16 +480,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1560" height="1050" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39875388" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40549102" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -462,8 +499,8 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.10103627" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33262935" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16506922" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.43863395" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -494,9 +531,105 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Grid.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state line="180" column="62" selection-start="6259" selection-end="6259" vertical-scroll-proportion="0.0" vertical-offset="3060" max-vertical-offset="7922">
+          <folding>
+            <element signature="e#894#900#0" expanded="true" />
+            <element signature="e#950#956#0" expanded="true" />
+            <element signature="e#6265#6271#0" expanded="true" />
+            <element signature="e#14041#14047#0" expanded="true" />
+            <element signature="e#15418#15955#0" expanded="true" />
+            <element signature="e#15944#15945#0" expanded="true" />
+            <element signature="e#17958#17959#0" expanded="true" />
+            <element signature="e#17984#17985#0" expanded="true" />
+            <element signature="method#getStatus#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#getXpos#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#getYpos#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#setFlag#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#getFlag#0;class#Case#0;class#Grid#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Minesweeper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="105" column="47" selection-start="2616" selection-end="2616" vertical-scroll-proportion="0.0" vertical-offset="1785" max-vertical-offset="2176">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Grid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="268" column="21" selection-start="9452" selection-end="9452" vertical-scroll-proportion="0.0" vertical-offset="4556" max-vertical-offset="7922">
+          <folding>
+            <element signature="e#894#900#0" expanded="true" />
+            <element signature="e#950#956#0" expanded="true" />
+            <element signature="e#6265#6271#0" expanded="true" />
+            <element signature="e#14041#14047#0" expanded="true" />
+            <element signature="e#15418#15955#0" expanded="true" />
+            <element signature="e#15944#15945#0" expanded="true" />
+            <element signature="e#17958#17959#0" expanded="true" />
+            <element signature="e#17984#17985#0" expanded="true" />
+            <element signature="method#getStatus#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#getXpos#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#getYpos#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#setFlag#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#getFlag#0;class#Case#0;class#Grid#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Minesweeper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="105" column="53" selection-start="2622" selection-end="2622" vertical-scroll-proportion="0.0" vertical-offset="1785" max-vertical-offset="2176">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Grid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="279" column="24" selection-start="9793" selection-end="9793" vertical-scroll-proportion="0.0" vertical-offset="4743" max-vertical-offset="8007">
+          <folding>
+            <element signature="e#894#900#0" expanded="true" />
+            <element signature="e#950#956#0" expanded="true" />
+            <element signature="e#6265#6271#0" expanded="true" />
+            <element signature="e#14041#14047#0" expanded="true" />
+            <element signature="e#15418#15955#0" expanded="true" />
+            <element signature="e#15944#15945#0" expanded="true" />
+            <element signature="e#17958#17959#0" expanded="true" />
+            <element signature="e#17984#17985#0" expanded="true" />
+            <element signature="method#getStatus#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#getXpos#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#getYpos#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#setFlag#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#getFlag#0;class#Case#0;class#Grid#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Minesweeper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="105" column="53" selection-start="2622" selection-end="2622" vertical-scroll-proportion="0.0" vertical-offset="1785" max-vertical-offset="2176">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Grid.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state line="172" column="4" selection-start="6031" selection-end="6031" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4590">
           <folding>
-            <element signature="e#7944#7950#0" expanded="true" />
+            <element signature="e#894#900#0" expanded="true" />
+            <element signature="e#950#956#0" expanded="true" />
+            <element signature="e#6265#6271#0" expanded="true" />
+            <element signature="e#14041#14047#0" expanded="true" />
+            <element signature="e#15418#15955#0" expanded="true" />
+            <element signature="e#15944#15945#0" expanded="true" />
+            <element signature="e#17958#17959#0" expanded="true" />
+            <element signature="e#17984#17985#0" expanded="true" />
+            <element signature="method#getStatus#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#getXpos#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#getYpos#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#setFlag#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#getFlag#0;class#Case#0;class#Grid#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -512,7 +645,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="129" column="70" selection-start="4591" selection-end="4591" vertical-scroll-proportion="0.0" vertical-offset="2193" max-vertical-offset="4539">
           <folding>
-            <element signature="e#7944#7950#0" expanded="true" />
+            <element signature="e#894#900#0" expanded="true" />
+            <element signature="e#950#956#0" expanded="true" />
+            <element signature="e#6265#6271#0" expanded="true" />
+            <element signature="e#14041#14047#0" expanded="true" />
+            <element signature="e#15418#15955#0" expanded="true" />
+            <element signature="e#15944#15945#0" expanded="true" />
+            <element signature="e#17958#17959#0" expanded="true" />
+            <element signature="e#17984#17985#0" expanded="true" />
+            <element signature="method#getStatus#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#getXpos#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#getYpos#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#setFlag#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#getFlag#0;class#Case#0;class#Grid#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -528,7 +673,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="31" selection-start="469" selection-end="469" vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="4420">
           <folding>
-            <element signature="e#7944#7950#0" expanded="true" />
+            <element signature="e#894#900#0" expanded="true" />
+            <element signature="e#950#956#0" expanded="true" />
+            <element signature="e#6265#6271#0" expanded="true" />
+            <element signature="e#14041#14047#0" expanded="true" />
+            <element signature="e#15418#15955#0" expanded="true" />
+            <element signature="e#15944#15945#0" expanded="true" />
+            <element signature="e#17958#17959#0" expanded="true" />
+            <element signature="e#17984#17985#0" expanded="true" />
+            <element signature="method#getStatus#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#getXpos#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#getYpos#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#setFlag#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#getFlag#0;class#Case#0;class#Grid#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -544,7 +701,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="34" selection-start="332" selection-end="332" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="4454">
           <folding>
-            <element signature="e#7944#7950#0" expanded="true" />
+            <element signature="e#894#900#0" expanded="true" />
+            <element signature="e#950#956#0" expanded="true" />
+            <element signature="e#6265#6271#0" expanded="true" />
+            <element signature="e#14041#14047#0" expanded="true" />
+            <element signature="e#15418#15955#0" expanded="true" />
+            <element signature="e#15944#15945#0" expanded="true" />
+            <element signature="e#17958#17959#0" expanded="true" />
+            <element signature="e#17984#17985#0" expanded="true" />
+            <element signature="method#getStatus#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#getXpos#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#getYpos#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#setFlag#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#getFlag#0;class#Case#0;class#Grid#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -560,7 +729,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="30" selection-start="224" selection-end="224" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4369">
           <folding>
-            <element signature="e#7944#7950#0" expanded="true" />
+            <element signature="e#894#900#0" expanded="true" />
+            <element signature="e#950#956#0" expanded="true" />
+            <element signature="e#6265#6271#0" expanded="true" />
+            <element signature="e#14041#14047#0" expanded="true" />
+            <element signature="e#15418#15955#0" expanded="true" />
+            <element signature="e#15944#15945#0" expanded="true" />
+            <element signature="e#17958#17959#0" expanded="true" />
+            <element signature="e#17984#17985#0" expanded="true" />
+            <element signature="method#getStatus#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#getXpos#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#getYpos#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#setFlag#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#getFlag#0;class#Case#0;class#Grid#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -586,7 +767,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="116" column="73" selection-start="4035" selection-end="4035" vertical-scroll-proportion="0.0" vertical-offset="1963" max-vertical-offset="4369">
           <folding>
-            <element signature="e#7944#7950#0" expanded="true" />
+            <element signature="e#894#900#0" expanded="true" />
+            <element signature="e#950#956#0" expanded="true" />
+            <element signature="e#6265#6271#0" expanded="true" />
+            <element signature="e#14041#14047#0" expanded="true" />
+            <element signature="e#15418#15955#0" expanded="true" />
+            <element signature="e#15944#15945#0" expanded="true" />
+            <element signature="e#17958#17959#0" expanded="true" />
+            <element signature="e#17984#17985#0" expanded="true" />
+            <element signature="method#getStatus#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#getXpos#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#getYpos#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#setFlag#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#getFlag#0;class#Case#0;class#Grid#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -612,7 +805,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="73" column="8" selection-start="2080" selection-end="2080" vertical-scroll-proportion="0.0" vertical-offset="1241" max-vertical-offset="4012">
           <folding>
-            <element signature="e#7944#7950#0" expanded="true" />
+            <element signature="e#894#900#0" expanded="true" />
+            <element signature="e#950#956#0" expanded="true" />
+            <element signature="e#6265#6271#0" expanded="true" />
+            <element signature="e#14041#14047#0" expanded="true" />
+            <element signature="e#15418#15955#0" expanded="true" />
+            <element signature="e#15944#15945#0" expanded="true" />
+            <element signature="e#17958#17959#0" expanded="true" />
+            <element signature="e#17984#17985#0" expanded="true" />
+            <element signature="method#getStatus#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#getXpos#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#getYpos#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#setFlag#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#getFlag#0;class#Case#0;class#Grid#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -638,7 +843,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="177" column="17" selection-start="5430" selection-end="5430" vertical-scroll-proportion="0.0" vertical-offset="2916" max-vertical-offset="3519">
           <folding>
-            <element signature="e#7944#7950#0" expanded="true" />
+            <element signature="e#894#900#0" expanded="true" />
+            <element signature="e#950#956#0" expanded="true" />
+            <element signature="e#6265#6271#0" expanded="true" />
+            <element signature="e#14041#14047#0" expanded="true" />
+            <element signature="e#15418#15955#0" expanded="true" />
+            <element signature="e#15944#15945#0" expanded="true" />
+            <element signature="e#17958#17959#0" expanded="true" />
+            <element signature="e#17984#17985#0" expanded="true" />
+            <element signature="method#getStatus#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#getXpos#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#getYpos#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#setFlag#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#getFlag#0;class#Case#0;class#Grid#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -664,7 +881,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="166" column="26" selection-start="4798" selection-end="4798" vertical-scroll-proportion="0.0" vertical-offset="2559" max-vertical-offset="3604">
           <folding>
-            <element signature="e#7944#7950#0" expanded="true" />
+            <element signature="e#894#900#0" expanded="true" />
+            <element signature="e#950#956#0" expanded="true" />
+            <element signature="e#6265#6271#0" expanded="true" />
+            <element signature="e#14041#14047#0" expanded="true" />
+            <element signature="e#15418#15955#0" expanded="true" />
+            <element signature="e#15944#15945#0" expanded="true" />
+            <element signature="e#17958#17959#0" expanded="true" />
+            <element signature="e#17984#17985#0" expanded="true" />
+            <element signature="method#getStatus#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#getXpos#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#getYpos#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#setFlag#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#getFlag#0;class#Case#0;class#Grid#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -690,7 +919,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="61" column="32" selection-start="1302" selection-end="1303" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="1258">
           <folding>
-            <element signature="e#7944#7950#0" expanded="true" />
+            <element signature="e#894#900#0" expanded="true" />
+            <element signature="e#950#956#0" expanded="true" />
+            <element signature="e#6265#6271#0" expanded="true" />
+            <element signature="e#14041#14047#0" expanded="true" />
+            <element signature="e#15418#15955#0" expanded="true" />
+            <element signature="e#15944#15945#0" expanded="true" />
+            <element signature="e#17958#17959#0" expanded="true" />
+            <element signature="e#17984#17985#0" expanded="true" />
+            <element signature="method#getStatus#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#getXpos#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#getYpos#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#setFlag#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#getFlag#0;class#Case#0;class#Grid#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -729,16 +970,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Minesweeper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="105" column="53" selection-start="2622" selection-end="2622" vertical-scroll-proportion="0.0" vertical-offset="1417" max-vertical-offset="2125">
+        <state line="105" column="47" selection-start="2616" selection-end="2616" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2125">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Grid.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="315" column="19" selection-start="11532" selection-end="11532" vertical-scroll-proportion="0.92574257" vertical-offset="4692" max-vertical-offset="7803">
+        <state line="360" column="29" selection-start="13024" selection-end="13024" vertical-scroll-proportion="0.51" vertical-offset="5746" max-vertical-offset="8534">
           <folding>
-            <element signature="e#7944#7950#0" expanded="true" />
+            <element signature="e#894#900#0" expanded="true" />
+            <element signature="e#950#956#0" expanded="true" />
+            <element signature="e#6265#6271#0" expanded="true" />
+            <element signature="e#14041#14047#0" expanded="true" />
+            <element signature="e#15418#15955#0" expanded="true" />
+            <element signature="e#15944#15945#0" expanded="true" />
+            <element signature="e#17958#17959#0" expanded="true" />
+            <element signature="e#17984#17985#0" expanded="true" />
+            <element signature="method#getStatus#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#getXpos#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#getYpos#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#setFlag#0;class#Case#0;class#Grid#0" expanded="true" />
+            <element signature="method#getFlag#0;class#Case#0;class#Grid#0" expanded="true" />
           </folding>
         </state>
       </provider>

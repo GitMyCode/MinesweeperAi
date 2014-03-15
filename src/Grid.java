@@ -4,6 +4,7 @@ import java.awt.event.*;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Random;
 
 /**
@@ -32,6 +33,9 @@ public class Grid extends JPanel  {
     Random random;
 
     ArrayList<int[]> listCoord = new ArrayList<int[]>();
+    ArrayList<Case> nextToMine = new ArrayList<Case>();
+    ArrayList<Case> toVerify   = new ArrayList<Case>();
+
 
     int ran_x;
     int ran_y;
@@ -60,6 +64,10 @@ public class Grid extends JPanel  {
         updateUI();
         gameover = false;
         mines_restantes = NB_MINES;
+
+        nextToMine.clear();
+        toVerify.clear();
+
         field=null;
         field = new Case[ROW][COL];
 
@@ -222,27 +230,30 @@ public class Grid extends JPanel  {
        * */ // cpy field
 
 
-        ArrayList<Case> bordures = new ArrayList<Case>();
         for(Case[] cases : field){
             for(Case c : cases){
-               if(c.estDecouvert && c.status >RIEN && c.status< MINE) bordures.add(c);
+               if(c.estDecouvert && c.status >RIEN && c.status< MINE) nextToMine.add(c);
             }
         }
 
           //System.out.print("=="+b.x+" "+b.y+"    sta:"+b.status);
-        ArrayList<Case> casesToCheck = new ArrayList<Case>();
 
-        //for(Case c :bordures ){c.setStatus(8);c.repaint();}
-            calculRecurs(bordures,casesToCheck,this, 0);
+        for(Case[] cases : field){
+           for(Case c : cases) {
+               if(c.flaged){c.setFlag(false);
+                c.repaint();
+               }
+           }
+        }
 
-        bordures.clear();
-        bordures =null;
-        casesToCheck.clear();
-        casesToCheck = null;
+        Grid copyGrid = new Grid(this);// un copy de la field pour la nouvelle combinaison
+            calculRecurs(copyGrid, 0);
 
+        nextToMine.clear();
+        toVerify.clear();
     }
 
-    public boolean calculRecurs(ArrayList<Case> bordure,ArrayList<Case> caseToCheck ,Grid grid,int nbBordure){
+    public boolean calculRecurs(Grid grid,int index){
         /*
         * Okey. Je check le nombre de flag qui doit etre placer autour
         * (1)
@@ -262,31 +273,32 @@ public class Grid extends JPanel  {
          *      -False
 
         * */
-        if(!checkValidFlag(caseToCheck,grid.field)){
+        if(!checkValidFlag(grid.field)){
             System.out.println("ici checkVlidFlag false");
             return false;
         }
-        if(nbBordure >= bordure.size()-1){
-            System.out.println("ici nbbordure > size :"+nbBordure);
+        if(index >= nextToMine.size()){
+            System.out.println("ici nbbordure > size :"+index);
             return true;
         }
-        ArrayList<Case> possibleMine = getVoisinNonDecouvert(bordure.get(nbBordure),grid.field);
-
-        System.out.print("\n------------------"+possibleMine.size()+"  x:"+bordure.get(nbBordure).x+"    y:"+bordure.get(nbBordure).y+
-                "  stat:"+bordure.get(nbBordure).status+"\n");
+        ArrayList<Case> possibleMine = getVoisinNonDecouvert(nextToMine.get(index),grid.field);
 
 
+
+        System.out.print("\n------------------"+possibleMine.size()+"  x:"+nextToMine.get(index).x+"    y:"+nextToMine.get(index).y+
+                "  stat:"+nextToMine.get(index).status+"  ind:"+index+"\n");
         ArrayList<int[]> listC = new ArrayList<int[]>();
 
-        ArrayList<Case> voisins = getVoisins(bordure.get(nbBordure),grid.field);
+        ArrayList<Case> voisins = getVoisins(nextToMine.get(index),grid.field);
         int nbFlagAplacer = 0;
         for(int i=0 ;i<voisins.size(); i++){
             if(voisins.get(i).getFlag()){ nbFlagAplacer--;}
         }
-        nbFlagAplacer+= bordure.get(nbBordure).status;
+        nbFlagAplacer+= nextToMine.get(index).status;
 
         if(nbFlagAplacer <0){
             System.out.println("Flag negatif");
+            toVerify.remove(nextToMine.get(index));
             return false;}
 
         int[] combinaison = new int[nbFlagAplacer];
@@ -295,22 +307,27 @@ public class Grid extends JPanel  {
         // (2)                           //////////////////////////////
 
 
+        if(nbFlagAplacer == 0){
+            System.out.println(nbFlagAplacer);
+            toVerify.add(nextToMine.get(index));
+            return calculRecurs(grid, index+1);
+        }
         for(int[] list : listC){ // Pour chaque combinison trouvé
-            Grid copyGrid = new Grid(grid);// un copy de la field pour la nouvelle combinaison
             Case temp;
+            System.out.print("\n------------------"+possibleMine.size()+"  x:"+nextToMine.get(index).x+"    y:"+nextToMine.get(index).y+
+                    "  stat:"+nextToMine.get(index).status+"  ind:"+index+"\n");
             for(int i=0; i<nbFlagAplacer ; i++){
                 System.out.print(list[i] + " ");
                 temp = possibleMine.get(list[i]);
                 System.out.println("      ==  x:"+temp.x+"  y:"+temp.y);
-                copyGrid.field[temp.x][temp.y].switchFlag(); // placer les flag sur la nouvelle field
+                grid.field[temp.x][temp.y].switchFlag(); // placer les flag sur la nouvelle field
+
             }
 
-            caseToCheck.add(copyGrid.field[bordure.get(nbBordure).x][bordure.get(nbBordure).y]);
-            //bordure.remove(nbBordure);
-            if(calculRecurs(bordure, caseToCheck, copyGrid, nbBordure)){
-
-
-                for(Case[] cases: copyGrid.field){
+            toVerify.add(nextToMine.get(index));
+            if(calculRecurs(grid, index+1)){
+                System.out.println("recurssion TRUE");
+                for(Case[] cases: grid.field){
                     for (Case c : cases){
                         if(c.getFlag()){
                             this.field[c.x][c.y].setFlag(true);
@@ -320,20 +337,39 @@ public class Grid extends JPanel  {
                 }
                 return true;
             }
-            System.out.println();
-        }
+            for(int i=0; i<nbFlagAplacer ; i++){
 
+                System.out.print(list[i] + " ");
+                temp = possibleMine.get(list[i]);
+                System.out.println("      ==  x:"+temp.x+"  y:"+temp.y);
+                grid.field[temp.x][temp.y].switchFlag(); // placer les flag sur la nouvelle field
+            }
+            if(index ==0){toVerify.clear();}else{
+            toVerify.remove(index);
+            }
+            System.out.println();
+
+        }
         listC.clear();
         voisins.clear();
 
+        //Arrive jusqu'ici si il y a des flag a poser mais peut importe ou il le place
+        // Cela cause une erreur plus loin
+        if(index ==0){// Ici la sollution la plus bs de l'univers
+            long seed = System.nanoTime();
+            Collections.shuffle(nextToMine, new Random(seed));
+            toVerify.clear();
+            calculRecurs(this,0);
+        }
+        toVerify.remove(nextToMine.get(index));
+        return false;
 
-        caseToCheck.add(grid.field[bordure.get(nbBordure).x][bordure.get(nbBordure).y]);
-        bordure.remove(nbBordure);
-        return calculRecurs(bordure, caseToCheck, grid, nbBordure);
+
     }
 
-    public boolean checkValidFlag(ArrayList<Case> bordureVisiter ,Case[][] copyField){
-        for(Case c : bordureVisiter){
+    ///////////////////////////////////////////////////
+    public boolean checkValidFlag(Case[][] copyField){
+        for(Case c : toVerify){
             ArrayList<Case> voisins = getVoisins(copyField[c.x][c.y],copyField);
             int indice=0;
             for(Case v : voisins){
@@ -341,12 +377,15 @@ public class Grid extends JPanel  {
             }
          //   System.out.println("x:"+c.x+"  y"+c.y+ "   indice:"+indice + "  status:"+c.getStatus());
             if(indice!= c.getStatus()){
-                voisins.clear();
+               System.out.println("x:"+c.x+"  y"+c.y+ "   indice:"+indice + "  status:"+c.getStatus());
+               voisins.clear();
                 voisins=null;
+
                 return false;}
         }
         return true;
     }
+    ///////////////////////////////////////////////////
     public ArrayList<Case> getVoisinNonDecouvert(Case c ,Case[][]field){
         ArrayList<Case> vInconnu = new ArrayList<Case>();
         if(estValide(c.x+1,c.y) && !field[c.x+1][c.y].estDecouvert && !field[c.x+1][c.y].flaged) vInconnu.add(field[c.x+1][c.y]);
@@ -360,6 +399,7 @@ public class Grid extends JPanel  {
 
         return vInconnu;
     }
+    ///////////////////////////////////////////////////
     public void AI(){
         final Timer timer = new Timer(500,null);
         //http://stackoverflow.com/questions/3858920/stop-a-swing-timer-from-inside-the-action-listener
@@ -382,6 +422,7 @@ public class Grid extends JPanel  {
         });
         timer.start();
     }
+    ///////////////////////////////////////////////////
     public void combinaisonFlag(int index,int nbFlag, int nbCase,int[] combinaison, ArrayList<int[]> listeC){
         if(nbFlag ==0){return;}
         if(index >= nbFlag){
