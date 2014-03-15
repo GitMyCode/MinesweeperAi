@@ -298,7 +298,9 @@ public class Grid extends JPanel  {
 
         if(nbFlagAplacer <0){
             System.out.println("Flag negatif");
-            toVerify.remove(nextToMine.get(index));
+             for(int i =index ; i< toVerify.size(); i++){
+                toVerify.remove(i);
+        }
             return false;}
 
         int[] combinaison = new int[nbFlagAplacer];
@@ -344,9 +346,12 @@ public class Grid extends JPanel  {
                 System.out.println("      ==  x:"+temp.x+"  y:"+temp.y);
                 grid.field[temp.x][temp.y].switchFlag(); // placer les flag sur la nouvelle field
             }
-            if(index ==0){toVerify.clear();}else{
-            toVerify.remove(index);
+            for(int i =index ; i< toVerify.size(); i++){
+                toVerify.remove(i);
             }
+            /*if(index ==0){toVerify.clear();}else{
+            toVerify.remove(index);
+            }*/
             System.out.println();
 
         }
@@ -355,13 +360,15 @@ public class Grid extends JPanel  {
 
         //Arrive jusqu'ici si il y a des flag a poser mais peut importe ou il le place
         // Cela cause une erreur plus loin
-        if(index ==0){// Ici la sollution la plus bs de l'univers
+        /*if(index ==0){// Ici la sollution la plus bs de l'univers si il n'a pas trouver de solution, shuffle et recommence..
             long seed = System.nanoTime();
             Collections.shuffle(nextToMine, new Random(seed));
             toVerify.clear();
             calculRecurs(this,0);
+        }*/
+        for(int i =index ; i< toVerify.size(); i++){
+                toVerify.remove(i);
         }
-        toVerify.remove(nextToMine.get(index));
         return false;
 
 
