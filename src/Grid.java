@@ -25,7 +25,7 @@ public class Grid extends JPanel  {
     private final int XFLAG = 12;
 
     private Image[] grid_icones;
-    private Case[][] field;
+    public Case[][] field;
     private JLabel status;
     private int mines_restantes;
     Controller controller;
@@ -273,8 +273,14 @@ public class Grid extends JPanel  {
          *      -False
 
         * */
-        if(!checkValidFlag(grid.field)){
+        //int start = (index == 0)? 0: index-1;
+         for(int i =index ; i< toVerify.size(); i++){
+            toVerify.remove(nextToMine.get(i));
+        }
+
+        if(!checkValidFlag(grid.field,index)){
             System.out.println("ici checkVlidFlag false");
+
             return false;
         }
         if(index >= nextToMine.size()){
@@ -298,10 +304,8 @@ public class Grid extends JPanel  {
 
         if(nbFlagAplacer <0){
             System.out.println("Flag negatif");
-             for(int i =index ; i< toVerify.size(); i++){
-                toVerify.remove(i);
+            return false;
         }
-            return false;}
 
         int[] combinaison = new int[nbFlagAplacer];
         combinaisonFlag(0,nbFlagAplacer,possibleMine.size(),combinaison,listC); // tout les combinaison de flag pour cette case
@@ -340,15 +344,16 @@ public class Grid extends JPanel  {
                 return true;
             }
             for(int i=0; i<nbFlagAplacer ; i++){
-
                 System.out.print(list[i] + " ");
                 temp = possibleMine.get(list[i]);
                 System.out.println("      ==  x:"+temp.x+"  y:"+temp.y);
-                grid.field[temp.x][temp.y].switchFlag(); // placer les flag sur la nouvelle field
+                grid.field[temp.x][temp.y].setFlag(false); // placer les flag sur la nouvelle field
             }
-            for(int i =index ; i< toVerify.size(); i++){
+            //start = (index == 0)? 0: index-1;
+            toVerify.remove(nextToMine.get(index));
+            /*for(int i =index ; i< toVerify.size(); i++){
                 toVerify.remove(i);
-            }
+            /*}
             /*if(index ==0){toVerify.clear();}else{
             toVerify.remove(index);
             }*/
@@ -366,8 +371,10 @@ public class Grid extends JPanel  {
             toVerify.clear();
             calculRecurs(this,0);
         }*/
-        for(int i =index ; i< toVerify.size(); i++){
-                toVerify.remove(i);
+        //start = (index == 0)? 0: index-1;
+        for(int i = index ; i< toVerify.size(); i++){
+            toVerify.remove(nextToMine.get(i));
+
         }
         return false;
 
@@ -375,7 +382,23 @@ public class Grid extends JPanel  {
     }
 
     ///////////////////////////////////////////////////
-    public boolean checkValidFlag(Case[][] copyField){
+    public boolean checkValidFlag(Case[][] copyField,int index){
+        for(int i=0; i< index ; i++){
+            Case c = nextToMine.get(i);
+            ArrayList<Case> voisins = getVoisins(copyField[c.x][c.y],copyField);
+            int indice=0;
+            for(Case v : voisins){
+                if(v.flaged) indice++;
+            }
+         //   System.out.println("x:"+c.x+"  y"+c.y+ "   indice:"+indice + "  status:"+c.getStatus());
+            if(indice!= c.getStatus()){
+               System.out.println("x:"+c.x+"  y"+c.y+ "   indice:"+indice + "  status:"+c.getStatus() +"   indexV:"+toVerify.indexOf(c) +" indexNTM:"+nextToMine.indexOf(c));
+               voisins.clear();
+                voisins=null;
+
+                return false;}
+        }
+         /*
         for(Case c : toVerify){
             ArrayList<Case> voisins = getVoisins(copyField[c.x][c.y],copyField);
             int indice=0;
@@ -384,12 +407,13 @@ public class Grid extends JPanel  {
             }
          //   System.out.println("x:"+c.x+"  y"+c.y+ "   indice:"+indice + "  status:"+c.getStatus());
             if(indice!= c.getStatus()){
-               System.out.println("x:"+c.x+"  y"+c.y+ "   indice:"+indice + "  status:"+c.getStatus());
+               System.out.println("x:"+c.x+"  y"+c.y+ "   indice:"+indice + "  status:"+c.getStatus() +"   indexV:"+toVerify.indexOf(c) +" indexNTM:"+nextToMine.indexOf(c));
                voisins.clear();
                 voisins=null;
 
                 return false;}
         }
+        */
         return true;
     }
     ///////////////////////////////////////////////////
@@ -446,7 +470,7 @@ public class Grid extends JPanel  {
         }
     }
     ///////////////////////////////////////  CLASSE CASE  //////////////////////////////////////////////
-    private class Case extends JPanel{
+    public class Case extends JPanel{
         boolean estDecouvert = false;
         int status;
         boolean flaged = false;

@@ -2,14 +2,15 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Random;
 
 /**
  * Created by MB on 3/12/14.
  */
 public class Minesweeper extends JFrame implements ActionListener{
 
-    private final int WIDTH = 260;
-    private final int HEIGHT = 315;
+    private final int WIDTH = 280;
+    private final int HEIGHT = 345;
 
 
     private JPanel menu;
@@ -35,6 +36,9 @@ public class Minesweeper extends JFrame implements ActionListener{
         test = new JButton("test");
         test.addActionListener(this);
 
+        JButton test100 = new JButton("100");
+        test100.addActionListener(this);
+
 
 
         Ai = new JButton("Ai");
@@ -48,25 +52,33 @@ public class Minesweeper extends JFrame implements ActionListener{
         menu.add(Ai,BorderLayout.SOUTH);
         menu.add(reset, BorderLayout.SOUTH);
         menu.add(test);
+        menu.add(test100);
 
+        add(menu, BorderLayout.SOUTH);
+
+        createGrid();
         Rule les_y = new Rule(1);
-        les_y.setSize(270,10);
+        les_y.setPreferredSize(new Dimension(270, 10));
         les_y.setAlignmentX(10);
         les_y.setLayout(new GridLayout(1, 15));
 
         Rule les_x = new Rule(0);
-        les_x.setSize(10,270);
-        les_x.setLayout(new GridLayout(15,1)); 
+        les_x.setPreferredSize(new Dimension(10,270));
+        les_x.setLayout(new GridLayout(15,1));
         add(les_y,BorderLayout.NORTH);
-        add(les_x,BorderLayout.WEST);
-        add(menu, BorderLayout.SOUTH);
+        add(les_x, BorderLayout.WEST);
 
-        createGrid();
+
 
     }
     public void createGrid(){
+        JPanel cadre = new JPanel(new FlowLayout());
+
+
         grid = new Grid(status);
-        add(grid, BorderLayout.CENTER);
+        grid.setPreferredSize(new Dimension(230, 245));
+        cadre.add(grid);
+        add(cadre, BorderLayout.CENTER);
 
     }
 
@@ -90,8 +102,33 @@ public class Minesweeper extends JFrame implements ActionListener{
             System.out.println("Ai");
             grid.AI();
 
-        }else if(e.getActionCommand()== "test" ){
+        }else if(e.getActionCommand()=="test"){
+
             grid.calculProbabilite();
+        }else if(e.getActionCommand()== "100" ){
+            for(int z=0;z<100;z++){
+                grid.game();
+                Random random = new Random();
+                int ran_x = random.nextInt(15 -1);
+                int ran_y = random.nextInt(15 -1);
+                grid.play(grid.field[ran_x][ran_y],false);
+                if(!grid.gameover){
+                    grid.calculProbabilite();
+                    boolean marche = false;
+                    for(int i=0;i<15;i++){
+                        for(int j=0; j<15 ;j++){
+                            if(grid.field[i][j].getFlag()){
+                                marche = true;
+                                break;
+                            }
+                        }
+                    }
+                    if (!marche){
+                        System.out.println("                                                           NON:"+z);
+                        return;}
+                }
+            }
+
         }
     }
 
