@@ -20,6 +20,7 @@ public class Minesweeper extends JFrame implements ActionListener{
     private JButton test;
 
     private Grid grid;
+    private JPanel cadre;
 
     public Minesweeper(){
 
@@ -56,7 +57,10 @@ public class Minesweeper extends JFrame implements ActionListener{
 
         add(menu, BorderLayout.SOUTH);
 
-        createGrid();
+
+
+        cadre = new JPanel();
+
         Rule les_y = new Rule(1);
         les_y.setPreferredSize(new Dimension(270, 10));
         les_y.setAlignmentX(10);
@@ -65,20 +69,23 @@ public class Minesweeper extends JFrame implements ActionListener{
         Rule les_x = new Rule(0);
         les_x.setPreferredSize(new Dimension(10,270));
         les_x.setLayout(new GridLayout(15,1));
-        add(les_y,BorderLayout.NORTH);
+
+        createGrid();
+
+
+        add(les_y, BorderLayout.NORTH);
         add(les_x, BorderLayout.WEST);
-
-
-
     }
     public void createGrid(){
-        JPanel cadre = new JPanel(new FlowLayout());
 
 
         grid = new Grid(status);
         grid.setPreferredSize(new Dimension(230, 245));
-        cadre.add(grid);
-        add(cadre, BorderLayout.CENTER);
+        cadre.add(grid,BorderLayout.CENTER);
+
+        cadre.setPreferredSize(new Dimension(295,320));
+
+        add(cadre);
 
     }
 

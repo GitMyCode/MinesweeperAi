@@ -245,6 +245,7 @@ public class Grid extends JPanel  {
                }
            }
         }
+        mines_restantes=NB_MINES;
 
         Grid copyGrid = new Grid(this);// un copy de la field pour la nouvelle combinaison
             calculRecurs(copyGrid, 0);
@@ -333,12 +334,19 @@ public class Grid extends JPanel  {
             toVerify.add(nextToMine.get(index));
             if(calculRecurs(grid, index+1)){
                 System.out.println("recurssion TRUE");
-                for(Case[] cases: grid.field){
-                    for (Case c : cases){
-                        if(c.getFlag()){
-                            this.field[c.x][c.y].setFlag(true);
-                            this.field[c.x][c.y].repaint();}
+
+                if(index ==0){
+                    for(Case[] cases: grid.field){
+                        for (Case c : cases){
+                            if(c.getFlag()){
+                                this.field[c.x][c.y].setFlag(true);
+                                this.field[c.x][c.y].repaint();
+                                mines_restantes--;
+                            }
+                        }
+
                     }
+                    status.setText(Integer.toString(mines_restantes));
 
                 }
                 return true;
