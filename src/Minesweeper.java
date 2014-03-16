@@ -9,18 +9,21 @@ import java.util.Random;
  */
 public class Minesweeper extends JFrame implements ActionListener{
 
-    private final int WIDTH = 280;
-    private final int HEIGHT = 345;
-
+    private final int WIDTH = 380;
+    private final int HEIGHT = 445;
+    final int ROW = 15;
+    final int COL = 15;
 
     private JPanel menu;
     private final JLabel status;
     private JButton reset;
     private JButton Ai;
-    private JButton test;
+    private JButton flags;
 
     private Grid grid;
     private Box cadre;
+
+
 
     public Minesweeper(){
 
@@ -35,8 +38,8 @@ public class Minesweeper extends JFrame implements ActionListener{
         status = new JLabel("");
         status.setSize(50,30);
 
-        test = new JButton("test");
-        test.addActionListener(this);
+        flags = new JButton("flags");
+        flags.addActionListener(this);
 
         JButton test100 = new JButton("100");
         test100.addActionListener(this);
@@ -53,7 +56,7 @@ public class Minesweeper extends JFrame implements ActionListener{
         menu.add(status, BorderLayout.SOUTH);
         menu.add(Ai,BorderLayout.SOUTH);
         menu.add(reset, BorderLayout.SOUTH);
-        menu.add(test);
+        menu.add(flags);
         menu.add(test100);
 
         add(menu, BorderLayout.SOUTH);
@@ -125,7 +128,7 @@ public class Minesweeper extends JFrame implements ActionListener{
                 JFrame executer = new Minesweeper();
                 executer.setVisible(true);
 
-        String test = "test";
+        String test = "flags";
         System.out.println(test.substring(1));
         System.out.println(test.charAt(0));
 
@@ -138,14 +141,29 @@ public class Minesweeper extends JFrame implements ActionListener{
             grid.game();
        }else if(e.getActionCommand() == "Ai"){
             System.out.println("Ai");
-            grid.AI();
+            grid.AI(450);
 
-        }else if(e.getActionCommand()=="test"){
+        }else if(e.getActionCommand()=="flags"){
 
             grid.calculProbabilite();
         }else if(e.getActionCommand()== "100" ){
+            int win=0;
+            int lose=0;
             for(int z=0;z<100;z++){
                 grid.game();
+                boolean firstplay = true;
+                Random random = new Random();
+                while(!grid.gameover){
+
+                    grid.AiPlay();
+                }
+                if(grid.gameWin()){
+                    win++;
+                }else{
+                    lose++;
+                }
+
+                /*
                 Random random = new Random();
                 int ran_x = random.nextInt(15 -1);
                 int ran_y = random.nextInt(15 -1);
@@ -165,7 +183,9 @@ public class Minesweeper extends JFrame implements ActionListener{
                         System.out.println("                                                           NON:"+z);
                         return;}
                 }
+                */
             }
+            System.out.println("                                            WIN:"+win+ "           LOSE:"+lose);
 
         }
     }
