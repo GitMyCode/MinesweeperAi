@@ -36,6 +36,7 @@ public class Grid extends JPanel  {
     ArrayList<Case> nextToMine = new ArrayList<Case>();
     ArrayList<Case> toVerify   = new ArrayList<Case>();
 
+    boolean firstplay = true;
 
     int ran_x;
     int ran_y;
@@ -333,8 +334,6 @@ public class Grid extends JPanel  {
 
             toVerify.add(nextToMine.get(index));
             if(calculRecurs(grid, index+1)){
-                System.out.println("recurssion TRUE");
-
                 if(index ==0){
                     for(Case[] cases: grid.field){
                         for (Case c : cases){
@@ -440,16 +439,39 @@ public class Grid extends JPanel  {
     }
     ///////////////////////////////////////////////////
     public void AI(){
-        final Timer timer = new Timer(500,null);
+        final Timer timer = new Timer(600,null);
         //http://stackoverflow.com/questions/3858920/stop-a-swing-timer-from-inside-the-action-listener
         timer.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                int ran_x = random.nextInt(ROW -1);
-                int ran_y = random.nextInt(COL -1);
-                play(field[ran_x][ran_y],false);
-                if(gameover)
+                ArrayList<Case> caseToPlay = new ArrayList<Case>();
+
+                if(firstplay){
+                    int ran_x = random.nextInt(ROW -1);
+                    int ran_y = random.nextInt(COL -1);
+
+                    play(field[ran_x][ran_y],false);
+                    firstplay=false;
+                }else{
+
+                    Case caseToPlays = caseToPlay();
+                    play(caseToPlays,false);
+                    calculProbabilite();
+
+                }
+
+                System.out.println("joue encore");
+                if(gameover){
+                        if(gameWin()){status.setText("Game Win!");}
+                        else             {status.setText("Game Lost!");}
+
+           /* repaint() pour reveler les caes*/
+                        for(Case[] cases : field){
+                            for(Case c : cases){c.repaint();}
+                        }
+                    System.out.println("FINI");
                     timer.stop();
+                }
 
                 //partir des cases non-null (qui on un indice) et prendre leurs voisins non decouvert
 
@@ -460,6 +482,86 @@ public class Grid extends JPanel  {
             }
         });
         timer.start();
+    }
+
+
+    public Case caseToPlay(){
+        Case play =null;
+        //ArrayList<Case> bordures = new ArrayList<Case>();
+        for(int i =0; i<ROW; i++){
+            for(int j=0; j<COL ; j++){
+               if(field[i][j].estDecouvert ){
+                   if(indiceEgalFlag(field[i][j])){
+                      ArrayList<Case> voisins = getVoisins(field[i][j],field);
+                       for(Case voisin:voisins){
+                           if(!voisin.estDecouvert && !voisin.flaged){
+                               if(play!=null && play.riskProbability > (field[i][j].status*1.5) -getNbVoisinSafe(voisin) ){
+                                   play=voisin;
+                                   play.riskProbability = (field[i][j].status*1.5) - getNbVoisinSafe(voisin);
+                               }else if(play==null){
+                                   play= voisin;
+                                   play.riskProbability = (field[i][j].status* 1.5) - getNbVoisinSafe(voisin);
+                               }
+                           }
+                       }
+                   }/*else{
+
+                       if(play!= null && getNbVoisinSafe(play) < getNbVoisinSafe(field[i][j])){
+                           play=field[i][j];
+                       }else if(play==null) {
+                           play=field[i][j];
+                       }*/
+               }
+            }
+        }
+        if(play!=null)
+            return play;
+
+        ran_x = random.nextInt(ROW-1);
+        ran_y = random.nextInt(COL - 1);
+
+        return field[ran_x][ran_y];
+    }
+
+
+    public boolean indiceEgalFlag(Case c){
+        ArrayList<Case> voisins = getVoisins(c,field);
+        int nbVoisinFlag = 0;
+        for(Case voisin : voisins){
+           if(voisin.flaged){
+               nbVoisinFlag++;
+           }
+        }
+
+        return (nbVoisinFlag == c.getStatus());
+    }
+    public int getNbVoisinSafe(Case c){
+        int nbVoisinSafe =0;
+
+       // if(indiceEgalFlag(c)){return 10;}
+        ArrayList<Case> voisins = getVoisins(c,field);
+        for(Case voisin : voisins){
+            if(voisin.estDecouvert ){
+                nbVoisinSafe++;
+            }
+        }
+
+        return nbVoisinSafe;
+    }
+    /*Verifie si cet case est peut etre une mine
+    * Elle regarde si elle a une case avec un indice a cote
+    * */
+    public boolean canBeMine(Case c){
+        boolean canBeMine = false;
+
+        ArrayList<Case> voisins = getVoisins(c,field);
+        for(Case c_voisin : voisins ){
+           if(c_voisin.getStatus()>RIEN && c_voisin.getStatus()<MINE){
+               return true;
+           }
+        }
+
+        return canBeMine;
     }
     ///////////////////////////////////////////////////
     public void combinaisonFlag(int index,int nbFlag, int nbCase,int[] combinaison, ArrayList<int[]> listeC){
@@ -483,6 +585,8 @@ public class Grid extends JPanel  {
         int status;
         boolean flaged = false;
         Image icone;
+
+        double riskProbability;
         int x;
         int y;
         ArrayList<Case> voisins;

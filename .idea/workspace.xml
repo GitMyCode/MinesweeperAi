@@ -61,7 +61,7 @@
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/Grid.java" line="314" class="Grid" package="">
+      <breakpoint url="file://$PROJECT_DIR$/src/Grid.java" line="315" class="Grid" package="">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -76,7 +76,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/Grid.java" line="487" class="Grid.Case" package="">
+      <breakpoint url="file://$PROJECT_DIR$/src/Grid.java" line="591" class="Grid.Case" package="">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -101,20 +101,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Grid.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Grid.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Grid.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="266" column="64" selection-start="9279" selection-end="9279" vertical-scroll-proportion="0.0" vertical-offset="4522" max-vertical-offset="9316">
-              <folding />
+            <state line="585" column="30" selection-start="21793" selection-end="21794" vertical-scroll-proportion="2.8437002" vertical-offset="8043" max-vertical-offset="10965">
+              <folding>
+                <element signature="e#893#899#0" expanded="true" />
+                <element signature="e#949#955#0" expanded="true" />
+                <element signature="e#6294#6300#0" expanded="true" />
+                <element signature="e#15588#15594#0" expanded="true" />
+                <element signature="e#16965#18282#0" expanded="true" />
+                <element signature="e#17125#17131#0" expanded="true" />
+                <element signature="e#18271#18272#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Minesweeper.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Minesweeper.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Minesweeper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="0" selection-start="1770" selection-end="1770" vertical-scroll-proportion="0.4338118" vertical-offset="901" max-vertical-offset="3383">
-              <folding />
+            <state line="68" column="32" selection-start="1607" selection-end="1607" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3383">
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -130,8 +140,8 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/../../AnimationJava/src/DigitalClock.java" />
-        <option value="$PROJECT_DIR$/src/Grid.java" />
         <option value="$PROJECT_DIR$/src/Minesweeper.java" />
+        <option value="$PROJECT_DIR$/src/Grid.java" />
       </list>
     </option>
   </component>
@@ -220,6 +230,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="FullScreen" value="false" />
+    <property name="SearchEverywhereHistory" value="" />
   </component>
   <component name="RunManager" selected="Application.Minesweeper">
     <configuration default="false" name="Minesweeper" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -528,168 +539,282 @@
     <entry file="file://$PROJECT_DIR$/src/Minesweeper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="65" column="0" selection-start="1526" selection-end="1526" vertical-scroll-proportion="0.0" vertical-offset="1105" max-vertical-offset="3400">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Minesweeper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="61" column="29" selection-start="1495" selection-end="1495" vertical-scroll-proportion="0.0" vertical-offset="1037" max-vertical-offset="2737">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Grid.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="31" selection-start="711" selection-end="712" vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="9061">
-          <folding />
+          <folding>
+            <element signature="e#893#899#0" expanded="true" />
+            <element signature="e#949#955#0" expanded="true" />
+            <element signature="e#6294#6300#0" expanded="true" />
+            <element signature="e#15588#15594#0" expanded="true" />
+            <element signature="e#16965#18282#0" expanded="true" />
+            <element signature="e#17125#17131#0" expanded="true" />
+            <element signature="e#18271#18272#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Minesweeper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="79" column="23" selection-start="1968" selection-end="1968" vertical-scroll-proportion="0.0" vertical-offset="1343" max-vertical-offset="2805">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Grid.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="478" column="0" selection-start="18120" selection-end="18120" vertical-scroll-proportion="0.0" vertical-offset="8126" max-vertical-offset="8670">
-          <folding />
+          <folding>
+            <element signature="e#893#899#0" expanded="true" />
+            <element signature="e#949#955#0" expanded="true" />
+            <element signature="e#6294#6300#0" expanded="true" />
+            <element signature="e#15588#15594#0" expanded="true" />
+            <element signature="e#16965#18282#0" expanded="true" />
+            <element signature="e#17125#17131#0" expanded="true" />
+            <element signature="e#18271#18272#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Minesweeper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="79" column="23" selection-start="1968" selection-end="1968" vertical-scroll-proportion="0.0" vertical-offset="1343" max-vertical-offset="2805">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Grid.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="300" column="0" selection-start="10647" selection-end="10647" vertical-scroll-proportion="0.0" vertical-offset="5100" max-vertical-offset="7973">
-          <folding />
+          <folding>
+            <element signature="e#893#899#0" expanded="true" />
+            <element signature="e#949#955#0" expanded="true" />
+            <element signature="e#6294#6300#0" expanded="true" />
+            <element signature="e#15588#15594#0" expanded="true" />
+            <element signature="e#16965#18282#0" expanded="true" />
+            <element signature="e#17125#17131#0" expanded="true" />
+            <element signature="e#18271#18272#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Minesweeper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="105" column="47" selection-start="2616" selection-end="2616" vertical-scroll-proportion="0.0" vertical-offset="1785" max-vertical-offset="2176">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Grid.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="180" column="62" selection-start="6259" selection-end="6259" vertical-scroll-proportion="0.0" vertical-offset="3060" max-vertical-offset="7922">
-          <folding />
+          <folding>
+            <element signature="e#893#899#0" expanded="true" />
+            <element signature="e#949#955#0" expanded="true" />
+            <element signature="e#6294#6300#0" expanded="true" />
+            <element signature="e#15588#15594#0" expanded="true" />
+            <element signature="e#16965#18282#0" expanded="true" />
+            <element signature="e#17125#17131#0" expanded="true" />
+            <element signature="e#18271#18272#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Minesweeper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="105" column="47" selection-start="2616" selection-end="2616" vertical-scroll-proportion="0.0" vertical-offset="1785" max-vertical-offset="2176">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Grid.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="268" column="21" selection-start="9452" selection-end="9452" vertical-scroll-proportion="0.0" vertical-offset="4556" max-vertical-offset="7922">
-          <folding />
+          <folding>
+            <element signature="e#893#899#0" expanded="true" />
+            <element signature="e#949#955#0" expanded="true" />
+            <element signature="e#6294#6300#0" expanded="true" />
+            <element signature="e#15588#15594#0" expanded="true" />
+            <element signature="e#16965#18282#0" expanded="true" />
+            <element signature="e#17125#17131#0" expanded="true" />
+            <element signature="e#18271#18272#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Minesweeper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="105" column="53" selection-start="2622" selection-end="2622" vertical-scroll-proportion="0.0" vertical-offset="1785" max-vertical-offset="2176">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Grid.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="279" column="24" selection-start="9793" selection-end="9793" vertical-scroll-proportion="0.0" vertical-offset="4743" max-vertical-offset="8007">
-          <folding />
+          <folding>
+            <element signature="e#893#899#0" expanded="true" />
+            <element signature="e#949#955#0" expanded="true" />
+            <element signature="e#6294#6300#0" expanded="true" />
+            <element signature="e#15588#15594#0" expanded="true" />
+            <element signature="e#16965#18282#0" expanded="true" />
+            <element signature="e#17125#17131#0" expanded="true" />
+            <element signature="e#18271#18272#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Minesweeper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="105" column="53" selection-start="2622" selection-end="2622" vertical-scroll-proportion="0.0" vertical-offset="1785" max-vertical-offset="2176">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Grid.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="172" column="4" selection-start="6031" selection-end="6031" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4590">
-          <folding />
+          <folding>
+            <element signature="e#893#899#0" expanded="true" />
+            <element signature="e#949#955#0" expanded="true" />
+            <element signature="e#6294#6300#0" expanded="true" />
+            <element signature="e#15588#15594#0" expanded="true" />
+            <element signature="e#16965#18282#0" expanded="true" />
+            <element signature="e#17125#17131#0" expanded="true" />
+            <element signature="e#18271#18272#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Minesweeper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="46" column="0" selection-start="1081" selection-end="1081" vertical-scroll-proportion="0.0" vertical-offset="782" max-vertical-offset="1394">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Grid.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="129" column="70" selection-start="4591" selection-end="4591" vertical-scroll-proportion="0.0" vertical-offset="2193" max-vertical-offset="4539">
-          <folding />
+          <folding>
+            <element signature="e#893#899#0" expanded="true" />
+            <element signature="e#949#955#0" expanded="true" />
+            <element signature="e#6294#6300#0" expanded="true" />
+            <element signature="e#15588#15594#0" expanded="true" />
+            <element signature="e#16965#18282#0" expanded="true" />
+            <element signature="e#17125#17131#0" expanded="true" />
+            <element signature="e#18271#18272#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Minesweeper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="67" column="21" selection-start="1594" selection-end="1594" vertical-scroll-proportion="0.0" vertical-offset="1139" max-vertical-offset="1462">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Grid.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="31" selection-start="469" selection-end="469" vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="4420">
-          <folding />
+          <folding>
+            <element signature="e#893#899#0" expanded="true" />
+            <element signature="e#949#955#0" expanded="true" />
+            <element signature="e#6294#6300#0" expanded="true" />
+            <element signature="e#15588#15594#0" expanded="true" />
+            <element signature="e#16965#18282#0" expanded="true" />
+            <element signature="e#17125#17131#0" expanded="true" />
+            <element signature="e#18271#18272#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Minesweeper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="67" column="21" selection-start="1594" selection-end="1594" vertical-scroll-proportion="0.0" vertical-offset="1139" max-vertical-offset="1462">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Grid.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="34" selection-start="332" selection-end="332" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="4454">
-          <folding />
+          <folding>
+            <element signature="e#893#899#0" expanded="true" />
+            <element signature="e#949#955#0" expanded="true" />
+            <element signature="e#6294#6300#0" expanded="true" />
+            <element signature="e#15588#15594#0" expanded="true" />
+            <element signature="e#16965#18282#0" expanded="true" />
+            <element signature="e#17125#17131#0" expanded="true" />
+            <element signature="e#18271#18272#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Minesweeper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="23" selection-start="348" selection-end="348" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1462">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Grid.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="30" selection-start="224" selection-end="224" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4369">
-          <folding />
+          <folding>
+            <element signature="e#893#899#0" expanded="true" />
+            <element signature="e#949#955#0" expanded="true" />
+            <element signature="e#6294#6300#0" expanded="true" />
+            <element signature="e#15588#15594#0" expanded="true" />
+            <element signature="e#16965#18282#0" expanded="true" />
+            <element signature="e#17125#17131#0" expanded="true" />
+            <element signature="e#18271#18272#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Minesweeper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="58" column="0" selection-start="1339" selection-end="1339" vertical-scroll-proportion="0.0" vertical-offset="807" max-vertical-offset="1462">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -706,14 +831,24 @@
     <entry file="file://$PROJECT_DIR$/src/Grid.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="116" column="73" selection-start="4035" selection-end="4035" vertical-scroll-proportion="0.0" vertical-offset="1963" max-vertical-offset="4369">
-          <folding />
+          <folding>
+            <element signature="e#893#899#0" expanded="true" />
+            <element signature="e#949#955#0" expanded="true" />
+            <element signature="e#6294#6300#0" expanded="true" />
+            <element signature="e#15588#15594#0" expanded="true" />
+            <element signature="e#16965#18282#0" expanded="true" />
+            <element signature="e#17125#17131#0" expanded="true" />
+            <element signature="e#18271#18272#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Minesweeper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="24" selection-start="483" selection-end="483" vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="1462">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -730,14 +865,24 @@
     <entry file="file://$PROJECT_DIR$/src/Grid.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="73" column="8" selection-start="2080" selection-end="2080" vertical-scroll-proportion="0.0" vertical-offset="1241" max-vertical-offset="4012">
-          <folding />
+          <folding>
+            <element signature="e#893#899#0" expanded="true" />
+            <element signature="e#949#955#0" expanded="true" />
+            <element signature="e#6294#6300#0" expanded="true" />
+            <element signature="e#15588#15594#0" expanded="true" />
+            <element signature="e#16965#18282#0" expanded="true" />
+            <element signature="e#17125#17131#0" expanded="true" />
+            <element signature="e#18271#18272#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Minesweeper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="31" selection-start="374" selection-end="374" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="714">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -754,14 +899,24 @@
     <entry file="file://$PROJECT_DIR$/src/Grid.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="177" column="17" selection-start="5430" selection-end="5430" vertical-scroll-proportion="0.0" vertical-offset="2916" max-vertical-offset="3519">
-          <folding />
+          <folding>
+            <element signature="e#893#899#0" expanded="true" />
+            <element signature="e#949#955#0" expanded="true" />
+            <element signature="e#6294#6300#0" expanded="true" />
+            <element signature="e#15588#15594#0" expanded="true" />
+            <element signature="e#16965#18282#0" expanded="true" />
+            <element signature="e#17125#17131#0" expanded="true" />
+            <element signature="e#18271#18272#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Minesweeper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="39" selection-start="415" selection-end="415" vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="714">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -778,14 +933,24 @@
     <entry file="file://$PROJECT_DIR$/src/Grid.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="166" column="26" selection-start="4798" selection-end="4798" vertical-scroll-proportion="0.0" vertical-offset="2559" max-vertical-offset="3604">
-          <folding />
+          <folding>
+            <element signature="e#893#899#0" expanded="true" />
+            <element signature="e#949#955#0" expanded="true" />
+            <element signature="e#6294#6300#0" expanded="true" />
+            <element signature="e#15588#15594#0" expanded="true" />
+            <element signature="e#16965#18282#0" expanded="true" />
+            <element signature="e#17125#17131#0" expanded="true" />
+            <element signature="e#18271#18272#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Minesweeper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="0" selection-start="599" selection-end="599" vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="714">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -802,14 +967,24 @@
     <entry file="file://$PROJECT_DIR$/src/Grid.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="61" column="32" selection-start="1302" selection-end="1303" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="1258">
-          <folding />
+          <folding>
+            <element signature="e#893#899#0" expanded="true" />
+            <element signature="e#949#955#0" expanded="true" />
+            <element signature="e#6294#6300#0" expanded="true" />
+            <element signature="e#15588#15594#0" expanded="true" />
+            <element signature="e#16965#18282#0" expanded="true" />
+            <element signature="e#17125#17131#0" expanded="true" />
+            <element signature="e#18271#18272#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Minesweeper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="39" selection-start="415" selection-end="415" vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="799">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -838,17 +1013,27 @@
         <state line="22" column="0" selection-start="508" selection-end="508" vertical-scroll-proportion="0.31653887" vertical-offset="0" max-vertical-offset="913" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Grid.java">
+    <entry file="file://$PROJECT_DIR$/src/Minesweeper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="266" column="64" selection-start="9279" selection-end="9279" vertical-scroll-proportion="0.0" vertical-offset="4522" max-vertical-offset="9316">
-          <folding />
+        <state line="68" column="32" selection-start="1607" selection-end="1607" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3383">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Minesweeper.java">
+    <entry file="file://$PROJECT_DIR$/src/Grid.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="0" selection-start="1770" selection-end="1770" vertical-scroll-proportion="0.4338118" vertical-offset="901" max-vertical-offset="3383">
-          <folding />
+        <state line="585" column="30" selection-start="21793" selection-end="21794" vertical-scroll-proportion="2.8437002" vertical-offset="8043" max-vertical-offset="10965">
+          <folding>
+            <element signature="e#893#899#0" expanded="true" />
+            <element signature="e#949#955#0" expanded="true" />
+            <element signature="e#6294#6300#0" expanded="true" />
+            <element signature="e#15588#15594#0" expanded="true" />
+            <element signature="e#16965#18282#0" expanded="true" />
+            <element signature="e#17125#17131#0" expanded="true" />
+            <element signature="e#18271#18272#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
