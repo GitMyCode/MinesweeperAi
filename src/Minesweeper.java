@@ -20,12 +20,13 @@ public class Minesweeper extends JFrame implements ActionListener{
     private JButton test;
 
     private Grid grid;
-    private JPanel cadre;
+    private Box cadre;
 
     public Minesweeper(){
 
         setSize(WIDTH,HEIGHT);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
 
         reset= new JButton("Reset");
         reset.setFont(new Font("Default",Font.PLAIN,10));
@@ -59,33 +60,63 @@ public class Minesweeper extends JFrame implements ActionListener{
 
 
 
-        cadre = new JPanel();
+        cadre = new Box(BoxLayout.Y_AXIS);
+        cadre.setAlignmentX(JComponent.CENTER_ALIGNMENT);
+        cadre.add(Box.createVerticalGlue());
+        cadre.add(Box.createHorizontalGlue());
+
 
         Rule les_y = new Rule(1);
-        les_y.setPreferredSize(new Dimension(270, 10));
-        les_y.setAlignmentX(10);
+        Dimension dim_y = new Dimension(250,7);
+        les_y.setPreferredSize(dim_y);
+        les_y.setMinimumSize(dim_y);
+        les_y.setMaximumSize(dim_y);
         les_y.setLayout(new GridLayout(1, 15));
 
         Rule les_x = new Rule(0);
-        les_x.setPreferredSize(new Dimension(10,270));
+        Dimension dim_x = new Dimension(10,250);
+        les_x.setPreferredSize(dim_x);
+        les_x.setMinimumSize(dim_x);
+        les_x.setMaximumSize(dim_x);
         les_x.setLayout(new GridLayout(15,1));
 
+
+
+        JPanel containter = new JPanel();
+        Dimension dim_container = new Dimension(260,260);
+        containter.setMaximumSize(dim_container);
+        containter.setMinimumSize(dim_container);
+        containter.setPreferredSize(dim_container);
+      //  containter.setBackground(Color.red);
+
+
+        containter.add(les_y, BorderLayout.NORTH);
+        
+        containter.add(les_x, BorderLayout.WEST);
         createGrid();
 
+        grid = new Grid(status);
+        Dimension dim_grid = new Dimension(235,250);
+        grid.setPreferredSize(dim_grid);
+        grid.setMaximumSize(dim_grid);
+        grid.setMinimumSize(dim_grid);
+       // grid.setBackground(Color.green);
+        containter.add(grid, BorderLayout.CENTER);
 
-        add(les_y, BorderLayout.NORTH);
-        add(les_x, BorderLayout.WEST);
+        Dimension dim_cadre = new Dimension(250,250);
+        cadre.setPreferredSize(dim_cadre);
+        cadre.setMaximumSize(dim_cadre);
+        cadre.setMaximumSize(dim_cadre);
+
+
+        cadre.add(containter);
+        cadre.add(Box.createVerticalGlue());
+        cadre.add(Box.createHorizontalGlue());
+        add(cadre, BorderLayout.CENTER);
     }
     public void createGrid(){
 
 
-        grid = new Grid(status);
-        grid.setPreferredSize(new Dimension(230, 245));
-        cadre.add(grid,BorderLayout.CENTER);
-
-        cadre.setPreferredSize(new Dimension(295,320));
-
-        add(cadre);
 
     }
 
