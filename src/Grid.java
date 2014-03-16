@@ -439,7 +439,7 @@ public class Grid extends JPanel  {
     }
     ///////////////////////////////////////////////////
     public void AI(){
-        final Timer timer = new Timer(600,null);
+        final Timer timer = new Timer(400,null);
         //http://stackoverflow.com/questions/3858920/stop-a-swing-timer-from-inside-the-action-listener
         timer.addActionListener(new ActionListener() {
             @Override
@@ -495,12 +495,12 @@ public class Grid extends JPanel  {
                       ArrayList<Case> voisins = getVoisins(field[i][j],field);
                        for(Case voisin:voisins){
                            if(!voisin.estDecouvert && !voisin.flaged){
-                               if(play!=null && play.riskProbability > (field[i][j].status*1.5) -getNbVoisinSafe(voisin) ){
+                               if(play!=null && play.riskProbability > (field[i][j].status*2.5) -getNbVoisinSafe(voisin) ){
                                    play=voisin;
-                                   play.riskProbability = (field[i][j].status*1.5) - getNbVoisinSafe(voisin);
+                                   play.riskProbability = (field[i][j].status*2.5) - getNbVoisinSafe(voisin);
                                }else if(play==null){
                                    play= voisin;
-                                   play.riskProbability = (field[i][j].status* 1.5) - getNbVoisinSafe(voisin);
+                                   play.riskProbability = (field[i][j].status* 2.5) - getNbVoisinSafe(voisin);
                                }
                            }
                        }
