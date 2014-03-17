@@ -12,10 +12,10 @@ import java.util.Random;
  */
 public class Grid extends JPanel  {
 
-    private final int ROW = 15;
-    private final int COL = 15;
+    private int ROW = 15;
+    private int COL = 15;
     private final int TOTAL_CELLS = 16;
-    private final int NB_MINES = 30;
+    private final int NB_MINES = 86;
 
 
     private final int RIEN = 0;
@@ -41,8 +41,9 @@ public class Grid extends JPanel  {
     int ran_x;
     int ran_y;
 
-    public Grid(JLabel status){
-
+    public Grid(JLabel status,int row,int col){
+        this.ROW = row;
+        this.COL = col;
         this.status = status; //reference au jlabel du jframe
         grid_icones = new Image[13]; // nb d'image
 

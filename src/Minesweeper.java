@@ -9,10 +9,10 @@ import java.util.Random;
  */
 public class Minesweeper extends JFrame implements ActionListener{
 
-    private final int WIDTH = 380;
-    private final int HEIGHT = 445;
-    final int ROW = 15;
-    final int COL = 15;
+    private final int WIDTH = 410;
+    private final int HEIGHT = 410;
+    final int ROW = 25;
+    final int COL = 25;
 
     private JPanel menu;
     private final JLabel status;
@@ -28,7 +28,7 @@ public class Minesweeper extends JFrame implements ActionListener{
 
     public Minesweeper(){
 
-        setSize(WIDTH,HEIGHT);
+        setSize(WIDTH+100,HEIGHT+100);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 
@@ -75,43 +75,46 @@ public class Minesweeper extends JFrame implements ActionListener{
 
 
         Rule les_y = new Rule(1);
-        Dimension dim_y = new Dimension(250,7);
+        Dimension dim_y = new Dimension(WIDTH,7);
         les_y.setPreferredSize(dim_y);
         les_y.setMinimumSize(dim_y);
         les_y.setMaximumSize(dim_y);
-        les_y.setLayout(new GridLayout(1, 15));
+        les_y.setLayout(new GridLayout(1,ROW));
 
         Rule les_x = new Rule(0);
-        Dimension dim_x = new Dimension(10,250);
+        Dimension dim_x = new Dimension(10,HEIGHT-20);
         les_x.setPreferredSize(dim_x);
         les_x.setMinimumSize(dim_x);
         les_x.setMaximumSize(dim_x);
-        les_x.setLayout(new GridLayout(15,1));
+        //les_x.setBackground(Color.CYAN);
+        les_x.setLayout(new GridLayout(COL,1));
 
 
 
-        JPanel containter = new JPanel();
-        Dimension dim_container = new Dimension(260,260);
+        JPanel containter = new JPanel(new GridBagLayout());
+        Dimension dim_container = new Dimension(WIDTH+20,HEIGHT+20);
         containter.setMaximumSize(dim_container);
         containter.setMinimumSize(dim_container);
         containter.setPreferredSize(dim_container);
-      //  containter.setBackground(Color.red);
+        //containter.setBackground(Color.red);
 
 
-        containter.add(les_y, BorderLayout.NORTH);
-        
-        containter.add(les_x, BorderLayout.WEST);
+        addItem(containter, les_y, 1, 0, 0, -40, GridBagConstraints.NORTHWEST);
+
+        addItem(containter, les_x, 0, 1, 0, 80, GridBagConstraints.WEST);
         createGrid();
 
-        grid = new Grid(status);
-        Dimension dim_grid = new Dimension(235,250);
+        grid = new Grid(status,ROW,COL);
+        Dimension dim_grid = new Dimension(WIDTH-15,HEIGHT-15);
         grid.setPreferredSize(dim_grid);
         grid.setMaximumSize(dim_grid);
         grid.setMinimumSize(dim_grid);
-       // grid.setBackground(Color.green);
-        containter.add(grid, BorderLayout.CENTER);
+        //grid.setBackground(Color.green);
 
-        Dimension dim_cadre = new Dimension(250,250);
+        addItem(containter,grid,1,1,0,0,GridBagConstraints.CENTER);
+
+
+        Dimension dim_cadre = new Dimension(WIDTH,HEIGHT);
         cadre.setPreferredSize(dim_cadre);
         cadre.setMaximumSize(dim_cadre);
         cadre.setMaximumSize(dim_cadre);
@@ -210,7 +213,7 @@ public class Minesweeper extends JFrame implements ActionListener{
                 placeholder.setFont(new Font("Arial",Font.BOLD,8));
                 add(placeholder);
             }
-            for(int i=0;i<15;i++){
+            for(int i=0;i<ROW;i++){
                 JLabel num = new JLabel();
                 num.setText(Integer.toString(i));
                 num.setForeground(Color.BLUE);
@@ -220,6 +223,20 @@ public class Minesweeper extends JFrame implements ActionListener{
         }
 
     }
+    private void addItem(JPanel p, JComponent c, int x, int y, int width, int height, int align) {
+        GridBagConstraints gc = new GridBagConstraints();
+        gc.gridx = x;
+        gc.gridy = y;
+        gc.gridwidth = width;
+        gc.gridheight = height;
+        gc.weightx = 100.0;
+        gc.weighty = 100.0;
+        gc.insets = new Insets(5, 5, 5, 5);
+        gc.anchor = align;
+        gc.fill = GridBagConstraints.NONE;
+        p.add(c, gc);
+    }
+
 
 
 }
