@@ -15,7 +15,7 @@ public class Grid extends JPanel  {
     private int ROW = 15;
     private int COL = 15;
     private final int TOTAL_CELLS = 16;
-    private final int NB_MINES = 50;
+    private final int NB_MINES = 80;
 
 
     private final int RIEN = 0;
@@ -245,6 +245,7 @@ public class Grid extends JPanel  {
 
         for(Case[] cases : field){
            for(Case c : cases) {
+               c.nbFlag=0;
                if(c.flaged){c.setFlag(false);
                 c.repaint();
                }
@@ -254,6 +255,15 @@ public class Grid extends JPanel  {
 
         Grid copyGrid = new Grid(this);// un copy de la field pour la nouvelle combinaison
             calculRecurs(copyGrid, 0);
+
+        for(Case[] cases: field){
+            for(Case c : cases){
+                if(c.getFlag()){
+                    System.out.println(" x:"+c.x+"  y:"+c.y +"    nbFlag:"+ c.nbFlag);
+                }
+            }
+        }
+
 
         nextToMine.clear();
         //toVerify.clear();
@@ -327,6 +337,7 @@ public class Grid extends JPanel  {
                     for(Case[] cases: grid.field){
                         for (Case c : cases){
                             if(c.getFlag()){
+                               this.field[c.x][c.y].nbFlag +=1;
                                if(!this.field[c.x][c.y].flaged){
                                 this.field[c.x][c.y].setFlag(true);
                                 this.field[c.x][c.y].repaint();
@@ -658,6 +669,7 @@ public class Grid extends JPanel  {
         boolean flaged = false;
         Image icone;
 
+        int nbFlag=0;
         double riskProbability;
         int x;
         int y;

@@ -13,11 +13,11 @@ public class Minesweeper extends JFrame implements ActionListener{
     * Expert : row 16, col 30, width 480, height 280
     * Medium : row 20, col 20, width 330, height 330
     * */
-    private final int WIDTH = 330; //pour expert : 480
-    private final int HEIGHT = 330; //poru expert :280
-    final int ROW = 20;
-    final int COL = 20;
+    final int ROW = 15;
+    final int COL = 15;
 
+    private final int WIDTH = (COL*15) ; //pour expert : 480
+    private final int HEIGHT = (ROW * 15); //poru expert :280
     private JPanel menu;
     private final JLabel status;
     private JButton reset;
@@ -79,14 +79,14 @@ public class Minesweeper extends JFrame implements ActionListener{
 
 
         Rule les_y = new Rule(1);
-        Dimension dim_y = new Dimension(WIDTH,7);
+        Dimension dim_y = new Dimension(WIDTH+20,7);
         les_y.setPreferredSize(dim_y);
         les_y.setMinimumSize(dim_y);
         les_y.setMaximumSize(dim_y);
         les_y.setLayout(new GridLayout(1,ROW));
 
         Rule les_x = new Rule(0);
-        Dimension dim_x = new Dimension(10,HEIGHT-20);
+        Dimension dim_x = new Dimension(10,HEIGHT);
         les_x.setPreferredSize(dim_x);
         les_x.setMinimumSize(dim_x);
         les_x.setMaximumSize(dim_x);
@@ -96,26 +96,26 @@ public class Minesweeper extends JFrame implements ActionListener{
 
 
         JPanel containter = new JPanel(new GridBagLayout());
-        Dimension dim_container = new Dimension(WIDTH+20,HEIGHT+20);
+        Dimension dim_container = new Dimension(WIDTH+30,HEIGHT+30);
         containter.setMaximumSize(dim_container);
         containter.setMinimumSize(dim_container);
         containter.setPreferredSize(dim_container);
         //containter.setBackground(Color.red);
 
 
-        addItem(containter, les_y, 1, 0, 0, -40, GridBagConstraints.NORTHWEST);
+        addItem(containter, les_y, 1, 0, 0, 7, GridBagConstraints.NORTHWEST);
 
-        addItem(containter, les_x, 1, 0, 0, 80, GridBagConstraints.WEST);
+        addItem(containter, les_x, 1, 0, 30, 80, GridBagConstraints.WEST);
         createGrid();
 
         grid = new Grid(status,ROW,COL);
-        Dimension dim_grid = new Dimension(WIDTH-15,HEIGHT-15);
+        Dimension dim_grid = new Dimension(WIDTH ,HEIGHT);
         grid.setPreferredSize(dim_grid);
         grid.setMaximumSize(dim_grid);
         grid.setMinimumSize(dim_grid);
         //grid.setBackground(Color.green);
 
-        addItem(containter,grid,1,1,0,0,GridBagConstraints.CENTER);
+        addItem(containter,grid,2,2,0,0,GridBagConstraints.CENTER);
 
 
         Dimension dim_cadre = new Dimension(WIDTH+30,HEIGHT+30);
@@ -137,8 +137,8 @@ public class Minesweeper extends JFrame implements ActionListener{
 
     public static void main(String[] args){
 
-                JFrame executer = new Minesweeper();
-                executer.setVisible(true);
+        JFrame executer = new Minesweeper();
+        executer.setVisible(true);
 
         String test = "flags";
         System.out.println(test.substring(1));
