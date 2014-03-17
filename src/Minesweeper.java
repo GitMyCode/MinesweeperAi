@@ -146,7 +146,7 @@ public class Minesweeper extends JFrame implements ActionListener{
             grid.game();
         }else if(e.getActionCommand() == "Ai"){
             System.out.println("Ai");
-            grid.AI(450);
+            grid.AI(250);
 
         }else if(e.getActionCommand()=="Un coup"){
             grid.AiPlay();

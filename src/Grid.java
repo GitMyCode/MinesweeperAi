@@ -148,6 +148,7 @@ public class Grid extends JPanel  {
     /*S'occuper de la mecanique d'un coup dans le jeu*/
     public void play(Case current,boolean flag){
 
+
         if(flag && current.flaged){
             current.switchFlag();
             current.repaint();
@@ -320,13 +321,16 @@ public class Grid extends JPanel  {
             }
          //   toVerify.add(nextToMine.get(index));
             if(calculRecurs(grid, index+1)){
-                if(index ==0){
+                if(true){
                     for(Case[] cases: grid.field){
                         for (Case c : cases){
                             if(c.getFlag()){
+                               if(!this.field[c.x][c.y].flaged){
                                 this.field[c.x][c.y].setFlag(true);
                                 this.field[c.x][c.y].repaint();
                                 mines_restantes--;
+                               }
+
                             }
                         }
 
@@ -334,7 +338,7 @@ public class Grid extends JPanel  {
                     status.setText(Integer.toString(mines_restantes));
 
                 }
-                return true;
+                //return true;
             }
             for(int i=0; i<nbFlagAplacer ; i++){
                 temp = possibleMine.get(list[i]);
@@ -402,7 +406,6 @@ public class Grid extends JPanel  {
 
                 AiPlay();
 
-                System.out.println("joue encore");
                 if(gameover){
                         if(gameWin()){status.setText("Game Win!");}
                         else             {status.setText("Game Lost!");}
@@ -429,6 +432,7 @@ public class Grid extends JPanel  {
 
 
                     Case caseToPlays = caseToPlay();
+                    if(caseToPlays == null) gameover=true;
                     play(caseToPlays,false);
                     calculProbabilite();
 
@@ -438,7 +442,7 @@ public class Grid extends JPanel  {
     public Case caseToPlay(){
         Case play =null;
         ArrayList<Case> bordures = getCaseBordure();
-/*
+
         Case bestBordure =null;
         for(Case c : bordures){
             int nbVoisinInconnu = getNbVoisinInconnu(c);
@@ -471,8 +475,7 @@ public class Grid extends JPanel  {
             }
 
         }
-*/
-
+     /*
 
         for(int i =0; i<ROW; i++){
             for(int j=0; j<COL ; j++){
@@ -494,13 +497,22 @@ public class Grid extends JPanel  {
                }
             }
         }
+        */
         if(play!=null)
             return play;
 
+        for(Case[] cases: field){
+            for(Case c : cases){
+                if(!c.estDecouvert && !c.getFlag()){
+                    play= c;
+                    break;
+                }
+            }
+        }
         ran_x = random.nextInt(ROW-1);
         ran_y = random.nextInt(COL - 1);
 
-        return field[ran_x][ran_y];
+        return play;
     }
 
 
