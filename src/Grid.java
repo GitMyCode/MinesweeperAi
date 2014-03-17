@@ -255,7 +255,7 @@ public class Grid extends JPanel  {
 
         Grid copyGrid = new Grid(this);// un copy de la field pour la nouvelle combinaison
             calculRecurs(copyGrid, 0);
-
+/*
         for(Case[] cases: field){
             for(Case c : cases){
                 if(c.getFlag()){
@@ -263,7 +263,7 @@ public class Grid extends JPanel  {
                 }
             }
         }
-
+*/
 
         nextToMine.clear();
         //toVerify.clear();
@@ -289,9 +289,6 @@ public class Grid extends JPanel  {
          *      -False
 
         * */
-        /* for(int i =index ; i< toVerify.size(); i++){
-            toVerify.remove(nextToMine.get(i));
-        }*/
 
         if(!checkValidFlag(grid.field,index)){
             return false;
@@ -324,6 +321,8 @@ public class Grid extends JPanel  {
         if(nbFlagAplacer == 0){
             return calculRecurs(grid, index+1);
         }
+
+
         for(int[] list : listC){ // Pour chaque combinison trouvé
             Case temp;
             for(int i=0; i<nbFlagAplacer ; i++){
@@ -331,7 +330,6 @@ public class Grid extends JPanel  {
                 grid.field[temp.x][temp.y].switchFlag(); // placer les flag sur la nouvelle field
 
             }
-         //   toVerify.add(nextToMine.get(index));
             if(calculRecurs(grid, index+1)){
                 if(true){
                     for(Case[] cases: grid.field){
@@ -357,7 +355,6 @@ public class Grid extends JPanel  {
                 temp = possibleMine.get(list[i]);
                 grid.field[temp.x][temp.y].setFlag(false); // placer les flag sur la nouvelle field
             }
-           // toVerify.remove(nextToMine.get(index));
 
 
         }
@@ -366,11 +363,7 @@ public class Grid extends JPanel  {
 
         //Arrive jusqu'ici si il y a des flag a poser mais peut importe ou il le place
         // Cela cause une erreur plus loin
-       /*for(int i = index ; i< toVerify.size(); i++){
-            toVerify.remove(nextToMine.get(i));
 
-        }
-        */
         return false;
 
 
@@ -397,13 +390,13 @@ public class Grid extends JPanel  {
     ///////////////////////////////////////////////////
     public ArrayList<Case> getVoisinNonDecouvert(Case c ,Case[][]field){
         ArrayList<Case> vInconnu = new ArrayList<Case>();
-        if((Object)c == null){return null;}
-        if(estValide(c.x+1,c.y) && !field[c.x+1][c.y].estDecouvert && !field[c.x+1][c.y].flaged) vInconnu.add(field[c.x+1][c.y]);
+        if((Object)c == null){return null;}  // Je n'aime pas cette ligne, cela rend la fonction moins previsible
+        if(estValide(c.x+1,c.y)   && !field[c.x+1][c.y].estDecouvert   && !field[c.x+1][c.y].flaged)   vInconnu.add(field[c.x+1][c.y]);
         if(estValide(c.x+1,c.y-1) && !field[c.x+1][c.y-1].estDecouvert && !field[c.x+1][c.y-1].flaged) vInconnu.add(field[c.x+1][c.y-1]);
         if(estValide(c.x+1,c.y+1) && !field[c.x+1][c.y+1].estDecouvert && !field[c.x+1][c.y+1].flaged) vInconnu.add(field[c.x+1][c.y+1]);
-        if(estValide(c.x,c.y-1) && !field[c.x][c.y-1].estDecouvert && !field[c.x][c.y-1].flaged) vInconnu.add(field[c.x][c.y-1]);
-        if(estValide(c.x,c.y+1) && !field[c.x][c.y+1].estDecouvert && !field[c.x][c.y+1].flaged) vInconnu.add(field[c.x][c.y+1]);
-        if(estValide(c.x-1,c.y) && !field[c.x-1][c.y].estDecouvert && !field[c.x-1][c.y].flaged) vInconnu.add(field[c.x-1][c.y]);
+        if(estValide(c.x,c.y-1)   && !field[c.x][c.y-1].estDecouvert   && !field[c.x][c.y-1].flaged)   vInconnu.add(field[c.x][c.y-1]);
+        if(estValide(c.x,c.y+1)   && !field[c.x][c.y+1].estDecouvert   && !field[c.x][c.y+1].flaged)   vInconnu.add(field[c.x][c.y+1]);
+        if(estValide(c.x-1,c.y)   && !field[c.x-1][c.y].estDecouvert   && !field[c.x-1][c.y].flaged)   vInconnu.add(field[c.x-1][c.y]);
         if(estValide(c.x-1,c.y-1) && !field[c.x-1][c.y-1].estDecouvert && !field[c.x-1][c.y-1].flaged) vInconnu.add(field[c.x-1][c.y-1]);
         if(estValide(c.x-1,c.y+1) && !field[c.x-1][c.y+1].estDecouvert && !field[c.x-1][c.y+1].flaged) vInconnu.add(field[c.x-1][c.y+1]);
 
@@ -543,6 +536,15 @@ public class Grid extends JPanel  {
 
         for(int i =0; i<ROW; i++){
             for(int j=0; j<COL ; j++){
+               if(field[i][j].getFlag()){
+                   for(Case voisin : getVoisins(field[i][j],field)){
+                       if(voisin.getStatus() ==RIEN){
+                           System.out.println("Flag inutil trouver x:"+field[i][j].x +"  y:"+field[i][j].y);
+                           play(field[i][j],true);
+
+                       }
+                   }
+               }
                if(field[i][j].estDecouvert ){
                    if(indiceEgalFlag(field[i][j])){
                       ArrayList<Case> voisins = getVoisins(field[i][j],field);

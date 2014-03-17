@@ -13,8 +13,8 @@ public class Minesweeper extends JFrame implements ActionListener{
     * Expert : row 16, col 30, width 480, height 280
     * Medium : row 20, col 20, width 330, height 330
     * */
-    final int ROW = 15;
-    final int COL = 15;
+    final int ROW = 25;
+    final int COL = 25;
 
     private final int WIDTH = (COL*15) ; //pour expert : 480
     private final int HEIGHT = (ROW * 15); //poru expert :280
