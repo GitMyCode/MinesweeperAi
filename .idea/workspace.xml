@@ -61,7 +61,7 @@
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/Grid.java" line="628" class="Grid" package="">
+      <breakpoint url="file://$PROJECT_DIR$/src/Grid.java" line="630" class="Grid" package="">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -89,7 +89,7 @@
       <file leaf-file-name="Grid.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Grid.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="257" column="2" selection-start="8910" selection-end="8910" vertical-scroll-proportion="0.35135135" vertical-offset="4029" max-vertical-offset="12376">
+            <state line="17" column="33" selection-start="406" selection-end="406" vertical-scroll-proportion="0.27027026" vertical-offset="0" max-vertical-offset="12410">
               <folding />
             </state>
           </provider>
@@ -833,7 +833,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Grid.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="257" column="2" selection-start="8910" selection-end="8910" vertical-scroll-proportion="0.35135135" vertical-offset="4029" max-vertical-offset="12376">
+        <state line="17" column="33" selection-start="406" selection-end="406" vertical-scroll-proportion="0.27027026" vertical-offset="0" max-vertical-offset="12410">
           <folding />
         </state>
       </provider>

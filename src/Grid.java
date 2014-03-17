@@ -15,7 +15,7 @@ public class Grid extends JPanel  {
     private int ROW = 15;
     private int COL = 15;
     private final int TOTAL_CELLS = 16;
-    private final int NB_MINES = 80;
+    private final int NB_MINES = 90;
 
 
     private final int RIEN = 0;
@@ -541,7 +541,9 @@ public class Grid extends JPanel  {
                        if(voisin.getStatus() ==RIEN){
                            System.out.println("Flag inutil trouver x:"+field[i][j].x +"  y:"+field[i][j].y);
                            play(field[i][j],true);
-
+                           play(field[i][j],false);
+                            play= field[i][j]; // Inutile, c'est juste pour ne pas retourner null;
+                           break;
                        }
                    }
                }
