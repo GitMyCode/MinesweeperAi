@@ -162,6 +162,7 @@ public class Grid extends JPanel  {
                 gameover =  (gameWin());
             }else{
                 current.estDecouvert = true;
+                if(current.getStatus()==MINE) System.out.println("MINE!!");
                 gameover = (current.getStatus() == MINE) || (gameWin());
                 if(current.getStatus()==RIEN){
                     ArrayList<Case> voisins =  getVoisins(current,this.field);
@@ -432,19 +433,55 @@ public class Grid extends JPanel  {
     public void AiPlay(){
 
 
-                    Case caseToPlays = caseToPlay();
-                    if(caseToPlays == null) gameover=true;
-                    play(caseToPlays,false);
-                    calculProbabilite();
+        ArrayList<Case> bordures = null;
+
+/*
+        Case essaiUnCoup =null;
+        if(bordures==null){
+            for(Case[] cases: field){
+                for(Case c : cases){
+                    if(!c.estDecouvert && !c.getFlag()){
+                        essaiUnCoup= c;
+                        break;
+                    }
+                }
+            }
+            if(essaiUnCoup == null) gameover=true;
+            play(essaiUnCoup,false);
+        }*/
+        calculProbabilite();
+        Case caseToPlays = caseToPlay();
+        if(caseToPlays==null)gameover=true;
+        play(caseToPlays,false);
+        calculProbabilite();
+        bordures = getCaseBordure();
+        System.out.println("Avant");
+        for(Case c : bordures){
+            ArrayList<Case> nonDecouvert = getVoisinNonDecouvert(c,field);
+            for(Case v : nonDecouvert){
+                play(v,false);
+            }
+
+        };
 
     }
 
 
     public Case caseToPlay(){
         Case play =null;
-        ArrayList<Case> bordures = getCaseBordure();
 
         Case bestBordure =null;
+        ArrayList<Case> bordures = getCaseBordure();
+/*
+        for(Case c : bordures){
+            ArrayList<Case> nonDecouvert = getVoisinNonDecouvert(c,field);
+            for(Case v : nonDecouvert){
+                play(v,false);
+            }
+
+        }*/
+
+
         for(Case c : bordures){
             int nbVoisinInconnu = getNbVoisinInconnu(c);
             if(nbVoisinInconnu> 0){
@@ -460,6 +497,7 @@ public class Grid extends JPanel  {
             }
 
         }
+
       // if(bestBordure!=null) System.out.println("  bordure choisi: x:"+ bestBordure.x + " y:"+bestBordure.y);
         ArrayList<Case> voisins = getVoisinNonDecouvert(bestBordure,field);
         if(voisins !=null){
@@ -476,6 +514,7 @@ public class Grid extends JPanel  {
             }
 
         }
+
      /*
 
         for(int i =0; i<ROW; i++){
