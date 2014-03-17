@@ -18,6 +18,7 @@ public class Minesweeper extends JFrame implements ActionListener{
     private final JLabel status;
     private JButton reset;
     private JButton Ai;
+    private JButton AiUnCoup;
     private JButton flags;
 
     private Grid grid;
@@ -34,6 +35,9 @@ public class Minesweeper extends JFrame implements ActionListener{
         reset= new JButton("Reset");
         reset.setFont(new Font("Default",Font.PLAIN,10));
         reset.addActionListener(this);
+
+        AiUnCoup = new JButton("Un coup");
+        AiUnCoup.addActionListener(this);
 
         status = new JLabel("");
         status.setSize(50,30);
@@ -55,6 +59,7 @@ public class Minesweeper extends JFrame implements ActionListener{
 
         menu.add(status, BorderLayout.SOUTH);
         menu.add(Ai,BorderLayout.SOUTH);
+        menu.add(AiUnCoup,BorderLayout.SOUTH);
         menu.add(reset, BorderLayout.SOUTH);
         menu.add(flags);
         menu.add(test100);
@@ -139,9 +144,12 @@ public class Minesweeper extends JFrame implements ActionListener{
         if     (e.getActionCommand() == "Reset"){
             System.out.println("reset");
             grid.game();
-       }else if(e.getActionCommand() == "Ai"){
+        }else if(e.getActionCommand() == "Ai"){
             System.out.println("Ai");
             grid.AI(450);
+
+        }else if(e.getActionCommand()=="Un coup"){
+            grid.AiPlay();
 
         }else if(e.getActionCommand()=="flags"){
 

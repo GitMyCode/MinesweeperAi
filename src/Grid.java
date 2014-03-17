@@ -286,22 +286,21 @@ public class Grid extends JPanel  {
         if(index >= nextToMine.size()){
             return true;
         }
-        ArrayList<Case> possibleMine = getVoisinNonDecouvert(nextToMine.get(index),grid.field);
+        ArrayList<Case> possibleMine = getVoisinNonDecouvert(nextToMine.get(index),grid.field); // Les voisin inconnu de la case en cour
+        ArrayList<int[]> listC = new ArrayList<int[]>();                                        // listC c'est les combinaison possible de flag qui satisfait l'indice
 
 
 
-        ArrayList<int[]> listC = new ArrayList<int[]>();
-
-        ArrayList<Case> voisins = getVoisins(nextToMine.get(index),grid.field);
+        ArrayList<Case> voisins = getVoisins(nextToMine.get(index),grid.field);       // prendre les voisin et voir combien de flag il reste a placer pour satisfaire l'indice
         int nbFlagAplacer = 0;
         for(int i=0 ;i<voisins.size(); i++){
             if(voisins.get(i).getFlag()){ nbFlagAplacer--;}
         }
         nbFlagAplacer+= nextToMine.get(index).status;
+        if(nbFlagAplacer <0){return false;} // Si il y a plus de flag que l'indice l'indique alors on retourn faux
 
-        if(nbFlagAplacer <0){
-            return false;
-        }
+
+
 
         int[] combinaison = new int[nbFlagAplacer];
         combinaisonFlag(0,nbFlagAplacer,possibleMine.size(),combinaison,listC); // tout les combinaison de flag pour cette case
@@ -381,6 +380,7 @@ public class Grid extends JPanel  {
     ///////////////////////////////////////////////////
     public ArrayList<Case> getVoisinNonDecouvert(Case c ,Case[][]field){
         ArrayList<Case> vInconnu = new ArrayList<Case>();
+        if((Object)c == null){return null;}
         if(estValide(c.x+1,c.y) && !field[c.x+1][c.y].estDecouvert && !field[c.x+1][c.y].flaged) vInconnu.add(field[c.x+1][c.y]);
         if(estValide(c.x+1,c.y-1) && !field[c.x+1][c.y-1].estDecouvert && !field[c.x+1][c.y-1].flaged) vInconnu.add(field[c.x+1][c.y-1]);
         if(estValide(c.x+1,c.y+1) && !field[c.x+1][c.y+1].estDecouvert && !field[c.x+1][c.y+1].flaged) vInconnu.add(field[c.x+1][c.y+1]);
@@ -427,25 +427,53 @@ public class Grid extends JPanel  {
     }
     public void AiPlay(){
 
-                if(firstplay){
-                    int ran_x = random.nextInt(ROW -1);
-                    int ran_y = random.nextInt(COL -1);
-
-                    play(field[ran_x][ran_y],false);
-                    firstplay=false;
-                }else{
 
                     Case caseToPlays = caseToPlay();
                     play(caseToPlays,false);
                     calculProbabilite();
 
-                }
     }
 
 
     public Case caseToPlay(){
         Case play =null;
-        //ArrayList<Case> bordures = new ArrayList<Case>();
+        ArrayList<Case> bordures = getCaseBordure();
+/*
+        Case bestBordure =null;
+        for(Case c : bordures){
+            int nbVoisinInconnu = getNbVoisinInconnu(c);
+            if(nbVoisinInconnu> 0){
+             if( bestBordure==null || getNbVoisinInconnu(bestBordure) >= nbVoisinInconnu) {
+                if(bestBordure!= null && getNbVoisinInconnu(bestBordure) == nbVoisinInconnu){
+
+                    bestBordure = (bestBordure.getStatus() > c.getStatus())? c:bestBordure;
+
+                }else{
+                    bestBordure=c;
+                }
+             }
+            }
+
+        }
+      // if(bestBordure!=null) System.out.println("  bordure choisi: x:"+ bestBordure.x + " y:"+bestBordure.y);
+        ArrayList<Case> voisins = getVoisinNonDecouvert(bestBordure,field);
+        if(voisins !=null){
+            for(Case voisin : voisins){
+                if(!voisin.estDecouvert && !voisin.flaged){
+                    if(play!=null && play.riskProbability > (bestBordure.status*1.5) - getNbVoisinSafe(voisin) ){
+                        play=voisin;
+                        play.riskProbability = (bestBordure.status*1.5) - getNbVoisinSafe(voisin);
+                    }else if(play==null){
+                        play= voisin;
+                        play.riskProbability = (bestBordure.status* 1.5) - getNbVoisinSafe(voisin);
+                    }
+                }
+            }
+
+        }
+*/
+
+
         for(int i =0; i<ROW; i++){
             for(int j=0; j<COL ; j++){
                if(field[i][j].estDecouvert ){
@@ -453,22 +481,16 @@ public class Grid extends JPanel  {
                       ArrayList<Case> voisins = getVoisins(field[i][j],field);
                        for(Case voisin:voisins){
                            if(!voisin.estDecouvert && !voisin.flaged){
-                               if(play!=null && play.riskProbability > (field[i][j].status*2.5) - getNbVoisinSafe(field[i][j]) ){
+                               if(play!=null && play.riskProbability > (field[i][j].status*1.5) - getNbVoisinSafe(field[i][j]) ){
                                    play=voisin;
-                                   play.riskProbability = (field[i][j].status*2.5) - getNbVoisinSafe(field[i][j]);
+                                   play.riskProbability = (field[i][j].status*1.5) - getNbVoisinSafe(field[i][j]);
                                }else if(play==null){
                                    play= voisin;
-                                   play.riskProbability = (field[i][j].status* 2.5) - getNbVoisinSafe(field[i][j]);
+                                   play.riskProbability = (field[i][j].status* 1.5) - getNbVoisinSafe(field[i][j]);
                                }
                            }
                        }
-                   }/*else{
-
-                       if(play!= null && getNbVoisinSafe(play) < getNbVoisinSafe(field[i][j])){
-                           play=field[i][j];
-                       }else if(play==null) {
-                           play=field[i][j];
-                       }*/
+                   }
                }
             }
         }
@@ -482,6 +504,17 @@ public class Grid extends JPanel  {
     }
 
 
+    public ArrayList<Case> getCaseBordure(){
+        ArrayList<Case> casesBordure = new ArrayList<Case>();
+        for(Case[] cases: field){
+            for(Case c : cases){
+                if(c.estDecouvert && c.getStatus()>RIEN && c.getStatus() <MINE){
+                    casesBordure.add(c);
+                }
+            }
+        }
+        return casesBordure;
+    }
     public boolean indiceEgalFlag(Case c){
         ArrayList<Case> voisins = getVoisins(c,field);
         int nbVoisinFlag = 0;
@@ -498,7 +531,7 @@ public class Grid extends JPanel  {
         int nbVoisinInconnu=0;
         ArrayList<Case> voisins = getVoisins(c,field);
         for(Case voisin : voisins){
-            if(!voisin.estDecouvert ){
+            if(!voisin.estDecouvert && !voisin.flaged ){
                 nbVoisinInconnu++;
             }
         }
