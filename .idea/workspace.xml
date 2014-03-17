@@ -61,7 +61,7 @@
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/Grid.java" line="630" class="Grid" package="">
+      <breakpoint url="file://$PROJECT_DIR$/src/Grid.java" line="652" class="Grid" package="">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -89,8 +89,10 @@
       <file leaf-file-name="Grid.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Grid.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="33" selection-start="406" selection-end="406" vertical-scroll-proportion="0.27027026" vertical-offset="0" max-vertical-offset="12410">
-              <folding />
+            <state line="571" column="24" selection-start="20366" selection-end="20366" vertical-scroll-proportion="1.1430843" vertical-offset="8818" max-vertical-offset="12784">
+              <folding>
+                <element signature="e#21466#21472#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -438,7 +440,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -528,7 +530,9 @@
     <entry file="file://$PROJECT_DIR$/src/Grid.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="31" selection-start="711" selection-end="712" vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="9061">
-          <folding />
+          <folding>
+            <element signature="e#21466#21472#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -542,7 +546,9 @@
     <entry file="file://$PROJECT_DIR$/src/Grid.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="478" column="0" selection-start="18120" selection-end="18120" vertical-scroll-proportion="0.0" vertical-offset="8126" max-vertical-offset="8670">
-          <folding />
+          <folding>
+            <element signature="e#21466#21472#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -556,7 +562,9 @@
     <entry file="file://$PROJECT_DIR$/src/Grid.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="300" column="0" selection-start="10647" selection-end="10647" vertical-scroll-proportion="0.0" vertical-offset="5100" max-vertical-offset="7973">
-          <folding />
+          <folding>
+            <element signature="e#21466#21472#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -570,7 +578,9 @@
     <entry file="file://$PROJECT_DIR$/src/Grid.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="180" column="62" selection-start="6259" selection-end="6259" vertical-scroll-proportion="0.0" vertical-offset="3060" max-vertical-offset="7922">
-          <folding />
+          <folding>
+            <element signature="e#21466#21472#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -584,7 +594,9 @@
     <entry file="file://$PROJECT_DIR$/src/Grid.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="268" column="21" selection-start="9452" selection-end="9452" vertical-scroll-proportion="0.0" vertical-offset="4556" max-vertical-offset="7922">
-          <folding />
+          <folding>
+            <element signature="e#21466#21472#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -598,7 +610,9 @@
     <entry file="file://$PROJECT_DIR$/src/Grid.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="279" column="24" selection-start="9793" selection-end="9793" vertical-scroll-proportion="0.0" vertical-offset="4743" max-vertical-offset="8007">
-          <folding />
+          <folding>
+            <element signature="e#21466#21472#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -612,7 +626,9 @@
     <entry file="file://$PROJECT_DIR$/src/Grid.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="172" column="4" selection-start="6031" selection-end="6031" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4590">
-          <folding />
+          <folding>
+            <element signature="e#21466#21472#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -626,7 +642,9 @@
     <entry file="file://$PROJECT_DIR$/src/Grid.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="129" column="70" selection-start="4591" selection-end="4591" vertical-scroll-proportion="0.0" vertical-offset="2193" max-vertical-offset="4539">
-          <folding />
+          <folding>
+            <element signature="e#21466#21472#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -640,7 +658,9 @@
     <entry file="file://$PROJECT_DIR$/src/Grid.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="31" selection-start="469" selection-end="469" vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="4420">
-          <folding />
+          <folding>
+            <element signature="e#21466#21472#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -654,7 +674,9 @@
     <entry file="file://$PROJECT_DIR$/src/Grid.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="34" selection-start="332" selection-end="332" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="4454">
-          <folding />
+          <folding>
+            <element signature="e#21466#21472#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -668,7 +690,9 @@
     <entry file="file://$PROJECT_DIR$/src/Grid.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="30" selection-start="224" selection-end="224" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4369">
-          <folding />
+          <folding>
+            <element signature="e#21466#21472#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -692,7 +716,9 @@
     <entry file="file://$PROJECT_DIR$/src/Grid.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="116" column="73" selection-start="4035" selection-end="4035" vertical-scroll-proportion="0.0" vertical-offset="1963" max-vertical-offset="4369">
-          <folding />
+          <folding>
+            <element signature="e#21466#21472#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -716,7 +742,9 @@
     <entry file="file://$PROJECT_DIR$/src/Grid.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="73" column="8" selection-start="2080" selection-end="2080" vertical-scroll-proportion="0.0" vertical-offset="1241" max-vertical-offset="4012">
-          <folding />
+          <folding>
+            <element signature="e#21466#21472#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -740,7 +768,9 @@
     <entry file="file://$PROJECT_DIR$/src/Grid.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="177" column="17" selection-start="5430" selection-end="5430" vertical-scroll-proportion="0.0" vertical-offset="2916" max-vertical-offset="3519">
-          <folding />
+          <folding>
+            <element signature="e#21466#21472#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -764,7 +794,9 @@
     <entry file="file://$PROJECT_DIR$/src/Grid.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="166" column="26" selection-start="4798" selection-end="4798" vertical-scroll-proportion="0.0" vertical-offset="2559" max-vertical-offset="3604">
-          <folding />
+          <folding>
+            <element signature="e#21466#21472#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -788,7 +820,9 @@
     <entry file="file://$PROJECT_DIR$/src/Grid.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="61" column="32" selection-start="1302" selection-end="1303" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="1258">
-          <folding />
+          <folding>
+            <element signature="e#21466#21472#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -833,8 +867,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Grid.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="33" selection-start="406" selection-end="406" vertical-scroll-proportion="0.27027026" vertical-offset="0" max-vertical-offset="12410">
-          <folding />
+        <state line="571" column="24" selection-start="20366" selection-end="20366" vertical-scroll-proportion="1.1430843" vertical-offset="8818" max-vertical-offset="12784">
+          <folding>
+            <element signature="e#21466#21472#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

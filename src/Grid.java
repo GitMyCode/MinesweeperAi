@@ -479,7 +479,7 @@ public class Grid extends JPanel  {
         }
 
 
-       calculProbabilite();
+        if(!gameover)calculProbabilite();
 
 
     }
@@ -534,30 +534,31 @@ public class Grid extends JPanel  {
         }
 */
 
-        for(int i =0; i<ROW; i++){
-            for(int j=0; j<COL ; j++){
-               if(field[i][j].getFlag()){
-                   for(Case voisin : getVoisins(field[i][j],field)){
+        for(Case[] cases : this.field){
+            for(Case c : cases){
+               if(c.getFlag()){
+                   ArrayList<Case> voisins = getVoisins(c,this.field);
+                   for(Case voisin : voisins){
                        if(voisin.getStatus() ==RIEN){
-                           System.out.println("Flag inutil trouver x:"+field[i][j].x +"  y:"+field[i][j].y);
-                           play(field[i][j],true);
-                           play(field[i][j],false);
-                            play= field[i][j]; // Inutile, c'est juste pour ne pas retourner null;
-                           break;
+                           System.out.println("Flag inutil trouver x:"+c.x +"  y:"+c.y);
+                            c.switchFlag();
+                           play(c,false);
+                            play= c; // Inutile, c'est juste pour ne pas retourner null;
+                           //break;
                        }
                    }
                }
-               if(field[i][j].estDecouvert ){
-                   if(indiceEgalFlag(field[i][j])){
-                      ArrayList<Case> voisins = getVoisins(field[i][j],field);
+               if(c.estDecouvert ){
+                   if(indiceEgalFlag(c)){
+                      ArrayList<Case> voisins = getVoisins(c,field);
                        for(Case voisin:voisins){
                            if(!voisin.estDecouvert && !voisin.flaged){
-                               if(play!=null && play.riskProbability > (field[i][j].status*1.5) - getNbVoisinSafe(field[i][j]) ){
+                               if(play!=null && play.riskProbability > (c.status*1.5) - getNbVoisinSafe(c) ){
                                    play=voisin;
-                                   play.riskProbability = (field[i][j].status*1.5) - getNbVoisinSafe(field[i][j]);
+                                   play.riskProbability = (c.status*1.5) - getNbVoisinSafe(c);
                                }else if(play==null){
                                    play= voisin;
-                                   play.riskProbability = (field[i][j].status* 1.5) - getNbVoisinSafe(field[i][j]);
+                                   play.riskProbability = (c.status* 1.5) - getNbVoisinSafe(c);
                                }
                            }
                        }
@@ -573,11 +574,32 @@ public class Grid extends JPanel  {
         for(Case[] cases: field){
             for(Case c : cases){
                 if(!c.estDecouvert && !c.getFlag()){
-                    play= c;
-                    break;
+                    return play= c;
                 }
             }
         }
+
+        /*Si il ne reste plus de case libre essayer meilleur chance*/
+
+        if(play==null && mines_restantes <0){
+            System.out.println("Dans essai coup");
+            for(Case[] zcases : field){
+               for(Case zc: zcases){
+                   if(zc.getFlag()){
+                       if(play ==null || zc.nbFlag <= play.nbFlag){
+
+                           //System.out.println(" essai un coup: x:"+zc.x +"  y"+zc.y);
+                           play = zc;
+                       }
+                   }
+
+               }
+            }
+            System.out.println("le choix:  x:"+play.x+ " y:"+play.y+ " nbFlag:"+play.nbFlag);
+
+            play.switchFlag();
+        }
+
         ran_x = random.nextInt(ROW-1);
         ran_y = random.nextInt(COL - 1);
 
