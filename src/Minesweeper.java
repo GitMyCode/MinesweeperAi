@@ -9,10 +9,14 @@ import java.util.Random;
  */
 public class Minesweeper extends JFrame implements ActionListener{
 
-    private final int WIDTH = 410;
-    private final int HEIGHT = 410;
-    final int ROW = 25;
-    final int COL = 25;
+    /*
+    * Expert : row 16, col 30, width 480, height 280
+    * Medium : row 20, col 20, width 330, height 330
+    * */
+    private final int WIDTH = 330; //pour expert : 480
+    private final int HEIGHT = 330; //poru expert :280
+    final int ROW = 20;
+    final int COL = 20;
 
     private JPanel menu;
     private final JLabel status;
@@ -101,7 +105,7 @@ public class Minesweeper extends JFrame implements ActionListener{
 
         addItem(containter, les_y, 1, 0, 0, -40, GridBagConstraints.NORTHWEST);
 
-        addItem(containter, les_x, 0, 1, 0, 80, GridBagConstraints.WEST);
+        addItem(containter, les_x, 1, 0, 0, 80, GridBagConstraints.WEST);
         createGrid();
 
         grid = new Grid(status,ROW,COL);
@@ -114,7 +118,7 @@ public class Minesweeper extends JFrame implements ActionListener{
         addItem(containter,grid,1,1,0,0,GridBagConstraints.CENTER);
 
 
-        Dimension dim_cadre = new Dimension(WIDTH,HEIGHT);
+        Dimension dim_cadre = new Dimension(WIDTH+30,HEIGHT+30);
         cadre.setPreferredSize(dim_cadre);
         cadre.setMaximumSize(dim_cadre);
         cadre.setMaximumSize(dim_cadre);
@@ -206,6 +210,7 @@ public class Minesweeper extends JFrame implements ActionListener{
 
         public Rule(int xOry){
             super();
+            int length = (xOry ==1)? COL: ROW;
             if(xOry == 1){
                 JLabel placeholder = new JLabel();
                 placeholder.setText("x-y");
@@ -213,7 +218,7 @@ public class Minesweeper extends JFrame implements ActionListener{
                 placeholder.setFont(new Font("Arial",Font.BOLD,8));
                 add(placeholder);
             }
-            for(int i=0;i<ROW;i++){
+            for(int i=0;i<length;i++){
                 JLabel num = new JLabel();
                 num.setText(Integer.toString(i));
                 num.setForeground(Color.BLUE);

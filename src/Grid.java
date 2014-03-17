@@ -15,7 +15,7 @@ public class Grid extends JPanel  {
     private int ROW = 15;
     private int COL = 15;
     private final int TOTAL_CELLS = 16;
-    private final int NB_MINES = 86;
+    private final int NB_MINES = 50;
 
 
     private final int RIEN = 0;
@@ -396,6 +396,7 @@ public class Grid extends JPanel  {
         if(estValide(c.x-1,c.y-1) && !field[c.x-1][c.y-1].estDecouvert && !field[c.x-1][c.y-1].flaged) vInconnu.add(field[c.x-1][c.y-1]);
         if(estValide(c.x-1,c.y+1) && !field[c.x-1][c.y+1].estDecouvert && !field[c.x-1][c.y+1].flaged) vInconnu.add(field[c.x-1][c.y+1]);
 
+
         return vInconnu;
     }
     ///////////////////////////////////////////////////
@@ -449,27 +450,40 @@ public class Grid extends JPanel  {
             if(essaiUnCoup == null) gameover=true;
             play(essaiUnCoup,false);
         }*/
-        calculProbabilite();
-        Case caseToPlays = caseToPlay();
-        if(caseToPlays==null)gameover=true;
-        play(caseToPlays,false);
-        calculProbabilite();
+        //calculProbabilite();
         bordures = getCaseBordure();
-        System.out.println("Avant");
-        for(Case c : bordures){
-            ArrayList<Case> nonDecouvert = getVoisinNonDecouvert(c,field);
+        ArrayList<Case> nonDecouvert =null;
+        if(bordures!=null){
+            System.out.println("netoyage");
+         for(Case c : bordures){
+            nonDecouvert = getVoisinNonDecouvert(c,field);
             for(Case v : nonDecouvert){
                 play(v,false);
             }
 
         };
+        }
+
+        if(bordures ==null || nonDecouvert.isEmpty()){
+
+            calculProbabilite();
+            System.out.println("null?");
+            Case caseToPlays = caseToPlay();
+            if(caseToPlays==null)gameover=true;
+            play(caseToPlays,false);
+
+        }
+
+
+       calculProbabilite();
+
 
     }
 
 
     public Case caseToPlay(){
         Case play =null;
-
+/*
         Case bestBordure =null;
         ArrayList<Case> bordures = getCaseBordure();
 /*
@@ -479,7 +493,7 @@ public class Grid extends JPanel  {
                 play(v,false);
             }
 
-        }*/
+        }
 
 
         for(Case c : bordures){
@@ -514,8 +528,7 @@ public class Grid extends JPanel  {
             }
 
         }
-
-     /*
+*/
 
         for(int i =0; i<ROW; i++){
             for(int j=0; j<COL ; j++){
@@ -537,7 +550,8 @@ public class Grid extends JPanel  {
                }
             }
         }
-        */
+
+
         if(play!=null)
             return play;
 
@@ -565,6 +579,9 @@ public class Grid extends JPanel  {
                 }
             }
         }
+        if (casesBordure.isEmpty())
+            return null;
+
         return casesBordure;
     }
     public boolean indiceEgalFlag(Case c){
