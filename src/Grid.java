@@ -15,7 +15,7 @@ public class Grid extends JPanel  {
     private int ROW = 15;
     private int COL = 15;
     private final int TOTAL_CELLS = 16;
-    private final int NB_MINES = 90;
+    private int NB_MINES = 119;
 
 
     private final int RIEN = 0;
@@ -41,9 +41,11 @@ public class Grid extends JPanel  {
     int ran_x;
     int ran_y;
 
-    public Grid(JLabel status,int row,int col){
+    public Grid(JLabel status,int row,int col, int nb_mines){
         this.ROW = row;
         this.COL = col;
+        this.NB_MINES = nb_mines;
+
         this.status = status; //reference au jlabel du jframe
         grid_icones = new Image[13]; // nb d'image
 
@@ -62,7 +64,9 @@ public class Grid extends JPanel  {
 
     //Initialise la game
     public void game(){
+
         removeAll();
+        revalidate();
         updateUI();
         gameover = false;
         mines_restantes = NB_MINES;
@@ -75,23 +79,17 @@ public class Grid extends JPanel  {
         field = new Case[ROW][COL];
 
         /* Creer les case dans la field*/
-        for(int i=0;i< ROW;i++){
+       for(int i=0;i< ROW;i++){
             for(int j=0; j< COL; j++){
                 field[i][j] = new Case();
                 field[i][j].x = i;
                 field[i][j].y = j;
                 field[i][j].addMouseListener(controller);
                 add(field[i][j]);
+                field[i][j].revalidate();
             }
         }
 
-/*        for(Case[] cases : field){
-            for(Case c : cases){
-                System.out.println(c.x+" "+c.y);
-                c.voisins = getVoisins(c);
-            }
-        }
-*/
 
         random = new Random();
         int ran_x,ran_y;
@@ -105,7 +103,13 @@ public class Grid extends JPanel  {
 
 
         calculateIndice(); // Place les indice autour des mines
+
         //  AI();
+
+       repaint_cases();
+        repaint();
+        revalidate();
+
     }
 
     public Grid(Grid toCopy){
@@ -177,10 +181,15 @@ public class Grid extends JPanel  {
                 else             {status.setText("Game Lost!");}
 
            /* repaint() pour reveler les caes*/
-                for(Case[] cases : field){
-                    for(Case c : cases){c.repaint();}
-                }
+              repaint_cases();
             }//fin gameover
+        }
+    }
+    public void repaint_cases(){
+        for(Case[] cases : field){
+            for(Case c : cases){
+                c.revalidate();
+                c.repaint();}
         }
     }
     /* Va chercher les voisins immediat et les retourne
@@ -221,7 +230,7 @@ public class Grid extends JPanel  {
     }
 
     public void calculProbabilite(){
-
+        System.out.println("CalculProbabilite");
 
        /*
        * copy field
@@ -688,6 +697,12 @@ public class Grid extends JPanel  {
             combinaisonFlag(index+1, nbFlag, nbCase, combinaison, listeC);
         }
     }
+
+    @Override
+    public void paint(Graphics g) {
+        super.paint(g);
+    }
+
     ///////////////////////////////////////  CLASSE CASE  //////////////////////////////////////////////
     public class Case extends JPanel{
         boolean estDecouvert = false;
