@@ -6,5 +6,6 @@
 *.ear
 
 #folders
+.idea/*
 /.idea/*
 out/
