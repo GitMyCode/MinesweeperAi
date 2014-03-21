@@ -1,5 +1,7 @@
+**Intelligence Articifielle pour un jeu de Minesweeper.
 
-Intelligence Articifielle pour un jeu de Minesweeper.
+![Alt text](https://dl.dropboxusercontent.com/u/14828537/MineSweeper%20Ai.gif)
+
 
 Cette version procède qu'avec CSP(Constraint satisfaction problem). Il calcul toutes les possibles positions de flags qui satisfont les indices, puis essai toutes les cases qui n'ont aucune chance d'avoir une mine. Sinon il procède par le hasard. Le taux de succès reste quand meme très élevé.
 
@@ -7,4 +9,3 @@ Aussi l'algorithme est très lent. Dans les pire cas il y a N! opperation. Donc 
 Une possible optimisation serait de segmenter le probleme. 10! > 5! + 5!  = 240 operation.
 
 
-![Alt text](https://dl.dropboxusercontent.com/u/14828537/MineSweeper%20Ai.gif)
