@@ -3,7 +3,7 @@
 ![Alt text](https://dl.dropboxusercontent.com/u/14828537/MineSweeper%20Ai.gif)
 
 
-Intelligence Articifiel pour un jeu de GridView
+Intelligence Articifiel pour un jeu de Minesweeper
 =======
 Cette version procède qu'avec CSP(Constraint satisfaction problem). Il calcul toutes les possibles positions de flags qui satisfont les indices, puis essai toutes les cases qui n'ont aucune chance d'avoir une mine. Sinon il procède par le hasard. Le taux de succès reste quand meme très élevé.
 
