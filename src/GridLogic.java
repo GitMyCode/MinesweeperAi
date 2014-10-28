@@ -50,7 +50,8 @@ public class GridLogic extends JPanel  {
         controller = new Controller();
         setLayout(new GridLayout(ROW, COL));
 
-        for(int i=0; i<13; i++){//I:\Dropbox\PROJETS\CSGAME\GridView\img /I/Dropbox/PROJETS/CSGAME/GridView/
+        for(int i=0; i<13; i++){
+
             //grid_icones[i] = (new ImageIcon(("img/j"+i+".gif"))).getImage();
             java.net.URL imageUrl = getClass().getResource("img/j"+i+".gif");
             grid_icones[i] = (new ImageIcon(imageUrl)).getImage();
@@ -471,7 +472,15 @@ public class GridLogic extends JPanel  {
         };
         }
 
-        if(bordures ==null || nonDecouvert.isEmpty()){
+
+        if(bordures == null ){
+            ArrayList<Case> free = getUndiscovered();
+            System.out.println("Hasard");
+                int next = random.nextInt(free.size());
+                play(free.get(next),false);
+        }
+
+        if( nonDecouvert != null && nonDecouvert.isEmpty()){
 
             calculProbabilite();
             System.out.println("null?");
@@ -484,6 +493,21 @@ public class GridLogic extends JPanel  {
 
         if(!gameover)calculProbabilite();
 
+
+    }
+
+    public ArrayList<Case> getUndiscovered(){
+        ArrayList<Case> undiscovered = new ArrayList<Case>();
+        for(int i =0; i< field.length; i++){
+            for (Case c: field[i]){
+                if(!c.estDecouvert){
+                    undiscovered.add(c);
+                }
+            }
+
+        }
+
+        return undiscovered;
 
     }
 

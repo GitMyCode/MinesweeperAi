@@ -156,7 +156,7 @@ public class GridView extends JFrame implements ActionListener{
 
 
     int width = (col*15) ; //pour expert : 480
-    int height = (row * 15); //poru expert :280
+    int height = (row * 15); //pour expert :280
 
         les_y = new Rule(1,col);
         Dimension dim_y = new Dimension(width+20,7);
@@ -228,11 +228,7 @@ public class GridView extends JFrame implements ActionListener{
             cadre.removeAll();
             cadre.repaint();
             cadre.revalidate();
-       /* cadre = new Box(BoxLayout.Y_AXIS);
-        cadre.setAlignmentX(JComponent.CENTER_ALIGNMENT);
-        cadre.add(Box.createVerticalGlue());
-        cadre.add(Box.createHorizontalGlue());
-*/
+
 
             String text_row = t_choice_row.getText();
             String text_col = t_choice_col.getText();
@@ -249,47 +245,7 @@ public class GridView extends JFrame implements ActionListener{
 
             cadre.repaint();
             cadre.revalidate();
-            /*
-            containter.remove(grid);
-            containter.remove(les_x);
-            containter.remove(les_y);
-            containter.removeAll();
-            cadre.remove(grid);
-            remove(grid);
 
-            //remove(grid);
-            grid= null;
-
-            containter.repaint();
-            containter.revalidate();
-
-
-           // containter.add(test);
-
-            grid.repaint_cases();
-            grid.repaint();
-            grid.revalidate();
-            invalidate();
-            add(grid);
-
-
-            grid.setVisible(true);
-            containter.repaint();
-            containter.revalidate();
-           containter.updateUI();
-            repaint();
-            validate();
-
-
-            //containter.updateUI();
-/*
-            cadre.invalidate();
-            cadre.validate();
-            cadre.updateUI();*/
-/*
-            getContentPane().invalidate();
-            getContentPane().validate();
-*/
         }else if(e.getActionCommand()== "100" ){
             int win=0;
             int lose=0;
@@ -347,7 +303,7 @@ public class GridView extends JFrame implements ActionListener{
                 placeholder.setFont(new Font("Arial",Font.BOLD,8));
                 add(placeholder);
             }
-            indicateurs = new JLabel[length];
+            indicateurs=  new JLabel[length];
             for(int i=0;i<length;i++){
                 JLabel num = new JLabel();
                 num.setText(Integer.toString(i));
