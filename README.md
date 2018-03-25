@@ -1,6 +1,6 @@
 <h3>Intelligence Articifielle pour un jeu de Minesweeper.</h3>
 
-![Alt text](https://dl.dropboxusercontent.com/u/14828537/MineSweeper%20Ai.gif)
+![Alt text](MineSweeper%20Ai.gif)
 
 
 Intelligence Articifiel pour un jeu de Minesweeper
